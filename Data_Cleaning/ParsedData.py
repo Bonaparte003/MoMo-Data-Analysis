@@ -62,3 +62,8 @@ for sms in root.findall('.//sms'):
     total_sms += 1
     category = categorize_sms(body)
     categories_count[category] += 1
+
+#Print results
+print(f"Total SMS entries found: {total_sms}")
+for category, count in categories_count.items():
+    print(f"{category}: {count} transactions")
