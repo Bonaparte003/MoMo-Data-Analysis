@@ -26,14 +26,15 @@ categories_count = {
     'Other': 0
 }
 
+# Categorization function
 def categorize_sms(body):
-    body = body.lower()
+    body = body.lower().strip()
     if 'received' in body or 'credited' in body:
         return 'Incoming Money'
     elif 'payment' in body or 'code holder' in body:
         return 'Payments to Code Holders'
     elif 'deposit' in body:
-        return 'Bank Deposit'
+        return 'Bank Deposits'
     elif 'transferred to' in body or 'sent to' in body:
         return 'Transfers to Mobile Numbers'
     elif 'withdraw' in body:
@@ -49,8 +50,7 @@ def categorize_sms(body):
     elif 'bundle' in body or 'internet' in body or 'voice' in body:
         return 'Internet and Voice Bundle Purchases'
     else:
-        return 'Other' 
-    
+        return 'Other'
 
 # Iterate through each 'sms' element in the XML
 for sms in root.findall('sms'):   
