@@ -11,6 +11,21 @@ except FileNotFoundError:
     print("XML file not found.")
     exit()
 
+# Dictionary to store transaction counts
+categories_count = {
+    'Incoming Money': 0,
+    'Payments to Code Holders': 0,
+    'Transfers to Mobile Numbers': 0,
+    'Bank Deposits': 0,
+    'Airtime Bill Payments': 0,
+    'Cash Power Bill Payments': 0,
+    'Transactions Initiated by Third Parties': 0,
+    'Withdrawals from Agents': 0,
+    'Bank Transfers': 0,
+    'Internet and Voice Bundle Purchases': 0,
+    'Other': 0
+}
+
 def categorize_sms(body):
     body = body.lower()
     if 'received' in body or 'credited' in body:
