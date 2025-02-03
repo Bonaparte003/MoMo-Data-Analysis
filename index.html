@@ -1,85 +1,86 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./images/logo_mtn_transparent.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/brands.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/solid.min.css">
-    <link rel="stylesheet" href="./index.css">
-    <title>Momo-Analyst</title>
-</head>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./images/logo_mtn_transparent.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/brands.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/solid.min.css">
+        <link rel="stylesheet" href="./index.css">
+        <title>Momo-Analyst</title>
+    </head>
 
-<body>
-    <section class="container">
-        <nav>
-            <div class="logo">
-                <img src="./images/logo_mtn_transparent.png" alt="logo" class="logo">
-            </div>
-            <ul class="nav-links">
-                <li>
-                    <div class="nav-link nav-link1">
-                        <i class="fas fa-home"></i>
-                        <p>Home</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="nav-link nav-link2">
-                        <i class="fas fa-file-alt"></i>
-                        <p>Add File</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="nav-link nav-link3">
-                        <i class="fas fa-print"></i>
-                        <p>Print</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="nav-link nav-link3">
-                        <i class="fas fa-clipboard-list"></i>
-                        <p>Budget</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="nav-link nav-link4">
-                        <i class="fas fa-robot"></i>
-                        <p>bot</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="nav-link nav-link5">
-                        <i class="fas fa-cog"></i>
-                        <p>Settings</p>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-        <section class="sub-container">
-            <!--Home Section-->
-            <section class="home-section">
-            </section>
-            <!--Add File Section -->
-            <section class="Add-file-section">
-                <div class="file-upload">
-                    <h1>UPLOAD A MESSAGES FILE</h1>
-                    <input type="file" id="file" class="file" style="display: none;">
-                    <label for="file" class="file-label">
-                        <i class="fas fa-file-upload"></i>
-                    </label>
+    <body>
+        <section class="container">
+            <nav>
+                <div class="logo">
+                    <img src="./images/logo_mtn_transparent.png" alt="logo" class="logo">
                 </div>
+                <ul class="nav-links">
+                    <li>
+                        <div class="nav-link nav-link1">
+                            <i class="fas fa-home"></i>
+                            <p>Home</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-link nav-link2">
+                            <i class="fas fa-file-alt"></i>
+                            <p>Add File</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-link nav-link3">
+                            <i class="fas fa-print"></i>
+                            <p>Print</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-link nav-link3">
+                            <i class="fas fa-clipboard-list"></i>
+                            <p>Budget</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-link nav-link4">
+                            <i class="fas fa-robot"></i>
+                            <p>bot</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-link nav-link5">
+                            <i class="fas fa-cog"></i>
+                            <p>Settings</p>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <section class="sub-container">
+                <!--Home Section-->
+                <section class="home-section">
+                </section>
+                <!--Add File Section -->
+                <section class="Add-file-section">
+                    <div class="file-upload">
+                        <h1>UPLOAD A MESSAGES FILE</h1>
+                        <input type="file" id="file" class="file" style="display: none;">
+                        <label for="file" class="file-label">
+                            <i class="fas fa-file-upload"></i>
+                        </label>
+                    </div>
+                </section>
+                <!--Print Section -->
+                <section class="print-section"></section>
+                <!--Budget Section-->
+                <section class="budget-section"></section>
+                <!--Bot Section-->
+                <section class="bot-section"></section>
+                <!--Settings-->
+                <section class="settings-section"></section>
             </section>
-            <!--Print Section -->
-            <section class="print-section"></section>
-            <!--Budget Section-->
-            <section class="budget-section"></section>
-            <!--Bot Section-->
-            <section class="bot-section"></section>
-            <!--Settings-->
-            <section class="settings-section"></section>
         </section>
-    </section>
-    <script src="./index.js"></script>
-</body>
+        <script src="./index.js"></script>
+    </body>
 
 </html>
