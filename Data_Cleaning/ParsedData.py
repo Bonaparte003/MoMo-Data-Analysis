@@ -1,8 +1,15 @@
 import xml.etree.ElementTree as ET
 
 # Load the XML file
-tree = ET.parse(r'C:\Users\ACER\.vscode\MoMo-Data-Analysis\Data_Cleaning\modified_sms_v2.xml')  # Replace with your XML file path
-root = tree.getroot()
+try:
+    tree = ET.parse(r'C:\users\lenovo\MoMo-Data-Analysis\data-cleaning\modified_sms_v2.xml')
+    root = tree.getroot()
+except ET.ParseError as e:
+    print(f"Error parsing XML file: {e}")
+    exit()
+except FileNotFoundError:
+    print("XML file not found.")
+    exit()
 
 def categorize_sms(body):
     body = body.lower()
