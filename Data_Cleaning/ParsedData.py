@@ -1,15 +1,9 @@
 import xml.etree.ElementTree as ET
+import re
 
-# Load the XML file
-try:
-    tree = ET.parse(r'C:\users\lenovo\MoMo-Data-Analysis\Data_Cleaning\modified_sms_v2.xml')
-    root = tree.getroot()
-except ET.ParseError as e:
-    print(f"Error parsing XML file: {e}")
-    exit()
-except FileNotFoundError:
-    print("XML file not found.")
-    exit()
+# Load the XML file (Replace with your actual XML file path)
+tree = ET.parse(r'C:\users\lenovo\MoMo-Data-Analysis\Data_Cleaning\modified_sms_v2.xml')  
+root = tree.getroot()
 
 # Dictionary to store categorized SMS details
 categories_data = {
@@ -28,26 +22,6 @@ categories_data = {
 
 # Function to categorize SMS based on keywords
 def categorize_sms(body):
-    """
-    Categorizes the given SMS body text into predefined categories based on keywords.
-
-    Args:
-        body (str): The body text of the SMS to be categorized.
-
-    Returns:
-        str: The category of the SMS. Possible categories are:
-            - 'Incoming Money'
-            - 'Payments to Code Holders'
-            - 'Bank Deposits'
-            - 'Transfers to Mobile Numbers'
-            - 'Withdrawals from Agents'
-            - 'Airtime Bill Payments'
-            - 'Cash Power Bill Payments'
-            - 'Transactions Initiated by Third Parties'
-            - 'Bank Transfers'
-            - 'Internet and Voice Bundle Purchases'
-            - 'Other'
-    """
     body = body.lower()
     if 'received' in body or 'credited' in body:
         return 'Incoming Money'
@@ -71,6 +45,8 @@ def categorize_sms(body):
         return 'Internet and Voice Bundle Purchases'
     else:
         return 'Other' 
+
+
 
 
 #Process SMS messages
