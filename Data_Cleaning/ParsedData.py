@@ -46,7 +46,65 @@ def categorize_sms(body):
     else:
         return 'Other' 
 
+# Function to extract transaction details from SMS body
+def extract_transaction_details(body):
+    details = {}
 
+    # Extract Transaction ID
+    tx_id_match = re.search(r'(TxId|Transaction ID|Financial Transaction Id)[:\s]+(\w+)', body, re.IGNORECASE)
+    details['Transaction ID'] = tx_id_match.group(2) if tx_id_match else "UNKNOWN"
+
+    # Extract Date and Time
+    date_match = re.search(r'(\d{4}-\d{2}-\d{2})\s+(\d{2}:\d{2}:\d{2})', body)
+    if date_match:
+        details['Date'] = date_match.group(1)
+        details['Time'] = date_match.group(2)
+
+    # Extract Sender Name
+    sender_match = re.search(r'from\s+([\w\s]+?)(?:\s*\(|$)', body, re.IGNORECASE)
+    details['Sender'] = sender_match.group(1).strip() if sender_match else "UNKNOWN"
+
+    # Extract Amount
+    amount_match = re.search(r'(\d{1,3}(?:,\d{3})*|\d+)\s?(RWF|Rwf|rwf)', body)
+    details['Amount'] = amount_match.group(1) + " RWF" if amount_match else "0 RWF"
+
+    # Extract Transaction Fee (optional, only add if found)
+    fee_match = re.search(r'Fee\s*was\s*(\d+)\s?RWF', body, re.IGNORECASE)
+    if fee_match:
+        details['Transaction Fee'] = fee_match.group(1) + " RWF"
+
+    return details
+
+# Process SMS messages in order
+sms_list = []  # Stores SMS in order of appearance
+
+for sms in root.findall('.//sms'):   
+    body = sms.get('body', '').strip()  
+    if not body:
+        continue  
+
+    category = categorize_sms(body)
+    transaction_details = extract_transaction_details(body)
+    
+    # Append transaction details in order to the list
+    sms_list.append((category, transaction_details))
+
+# Sort SMS messages based on their appearance in the XML (already in order)
+for category, transaction in sms_list:
+    categories_data[category].append(transaction)
+
+# Calculate total transactions and money spent per category
+total_sms = len(sms_list)
+category_totals = {}
+
+for category, transactions in categories_data.items():
+    total_amount = 0
+    for txn in transactions:
+        # Extract numeric value of Amount
+        amount_value = int(txn['Amount'].replace(" RWF", "").replace(",", ""))
+        total_amount += amount_value
+    
+    category_totals[category] = total_amount
 
 
 #Process SMS messages
