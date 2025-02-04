@@ -1,34 +1,28 @@
 import xml.etree.ElementTree as ET
+import re
 
-#Load the XML file
-try:
-    tree = ET.parse(r'D:\ALU\Software_Engineering\PROJECTS\MoMo-Data-Analysis\Data_Cleaning\modified_sms_v2.xml')
-    root = tree.getroot()
-except ET.ParseError as e:
-    print(f"Error parsing XML file: {e}")
-    exit()
-except FileNotFoundError:
-    print("XML file not found.")
-    exit()
+# Load the XML file (Replace with your actual XML file path)
+tree = ET.parse(r'C:\Users\ACER\.vscode\MoMo-Data-Analysis\Data_Cleaning\modified_sms_v2 copy.xml')  
+root = tree.getroot()
 
-#Dictionary to store transaction counts
-categories_count = {
-    'Incoming Money': 0,
-    'Payments to Code Holders': 0,
-    'Transfers to Mobile Numbers': 0,
-    'Bank Deposits': 0,
-    'Airtime Bill Payments': 0,
-    'Cash Power Bill Payments': 0,
-    'Transactions Initiated by Third Parties': 0,
-    'Withdrawals from Agents': 0,
-    'Bank Transfers': 0,
-    'Internet and Voice Bundle Purchases': 0,
-    'Other': 0
+# Dictionary to store categorized SMS details
+categories_data = {
+    'Incoming Money': [],
+    'Payments to Code Holders': [],
+    'Transfers to Mobile Numbers': [],
+    'Bank Deposits': [],
+    'Airtime Bill Payments': [],
+    'Cash Power Bill Payments': [],
+    'Transactions Initiated by Third Parties': [],
+    'Withdrawals from Agents': [],
+    'Bank Transfers': [],
+    'Internet and Voice Bundle Purchases': [],
+    'Other': []
 }
 
-#Categorization function
+# Function to categorize SMS based on keywords
 def categorize_sms(body):
-    body = body.lower().strip()
+    body = body.lower()
     if 'received' in body or 'credited' in body:
         return 'Incoming Money'
     elif 'payment' in body or 'code holder' in body:
@@ -50,20 +44,101 @@ def categorize_sms(body):
     elif 'bundle' in body or 'internet' in body or 'voice' in body:
         return 'Internet and Voice Bundle Purchases'
     else:
-        return 'Other'
+        return 'Other' 
 
-#Process SMS messages
-total_sms = 0
-for sms in root.findall('.//sms'):
-    body = sms.get('body', '').strip() #Ensure no missing or empty body
+# Function to extract transaction details from SMS body
+# Function to extract transaction details from SMS body
+def extract_transaction_details(body):
+    details = {}
+
+    # Extract Transaction ID
+    tx_id_match = re.search(r'(TxId|Transaction ID|Financial Transaction Id)[:\s]+(\w+)', body, re.IGNORECASE)
+    details['Transaction ID'] = tx_id_match.group(2) if tx_id_match else "UNKNOWN"
+
+    # Extract Date and Time
+    date_match = re.search(r'(\d{4}-\d{2}-\d{2})\s+(\d{2}:\d{2}:\d{2})', body)
+    if date_match:
+        details['Date'] = date_match.group(1)
+        details['Time'] = date_match.group(2)
+
+    # Extract Receiver Name (for outgoing transfers)
+    receiver_match = re.search(r'transferred to\s+([\w\s]+?)\s+\((\d+)\)', body, re.IGNORECASE)
+    if receiver_match:
+        details['Receiver'] = f"{receiver_match.group(1)} ({receiver_match.group(2)})"
+        details['Sender'] = "Self"  # Since it's us sending the money
+    else:
+        # Extract Sender Name for incoming transactions
+        sender_match = re.search(r'from\s+([\w\s]+?)(?:\s*\(|$)', body, re.IGNORECASE)
+        details['Sender'] = sender_match.group(1).strip() if sender_match else "UNKNOWN"
+
+    # Extract Amount
+    amount_match = re.search(r'(\d{1,3}(?:,\d{3})*|\d+)\s?(RWF|Rwf|rwf)', body)
+    details['Amount'] = amount_match.group(1) + " RWF" if amount_match else "0 RWF"
+
+    # Extract Transaction Fee
+    fee_match = re.search(r'Fee\s*was[:\s]*(\d+)\s?RWF', body, re.IGNORECASE)
+    details['Transaction Fee'] = fee_match.group(1) + " RWF" if fee_match else "0 RWF"
+
+    return details
+
+# Process SMS messages in order
+sms_list = []  # Stores SMS in order of appearance
+
+for sms in root.findall('.//sms'):   
+    body = sms.get('body', '').strip()  
     if not body:
-        continue #Skip SMS with no body
+        continue  
 
-    total_sms += 1
     category = categorize_sms(body)
-    categories_count[category] += 1
+    transaction_details = extract_transaction_details(body)
+    
+    # Append transaction details in order to the list
+    sms_list.append((category, transaction_details))
 
-#Print results
-print(f"Total SMS entries found: {total_sms}")
-for category, count in categories_count.items():
-    print(f"{category}: {count} transactions")
+# Sort SMS messages based on their appearance in the XML (already in order)
+for category, transaction in sms_list:
+    categories_data[category].append(transaction)
+
+# Calculate total transactions and money spent per category
+total_sms = len(sms_list)
+category_totals = {}
+
+for category, transactions in categories_data.items():
+    total_amount = 0
+    for txn in transactions:
+        # Extract numeric value of Amount
+        amount_value = int(txn['Amount'].replace(" RWF", "").replace(",", ""))
+        total_amount += amount_value
+    
+    category_totals[category] = total_amount
+
+# Save to file to avoid terminal cutoff
+output_file = r'C:\Users\ACER\.vscode\MoMo-Data-Analysis\Data_Cleaning\modified_sms_v2.xml'
+
+with open(output_file, 'w', encoding='utf-8') as f:
+    f.write(f"\nTotal SMS entries found: {total_sms}\n\n")
+
+    for category, transactions in categories_data.items():
+        count = len(transactions)
+        total_spent = category_totals[category]
+        
+        f.write(f"=== {category} ({count} transactions) ===\n")
+        f.write(f"Total Amount Spent: {total_spent} RWF\n\n")
+
+        if count == 0:
+            f.write("  No transactions found.\n\n")
+        else:
+            for i, txn in enumerate(transactions, start=1):
+                f.write(f"  Transaction {i}:\n")
+                for key, value in txn.items():
+                    if key == "Transaction Fee":
+                        f.write(f"    {key}: {value}\n")  # Print only if it exists
+                    elif key == "Transaction ID" and value == "UNKNOWN":
+                        f.write(f"    {key}: ERROR - Missing ID\n")  # Warn about missing ID
+                    else:
+                        f.write(f"    {key}: {value}\n")
+                f.write("\n")
+        
+        f.write("\n" + "="*50 + "\n\n")  # Separator for readability
+
+print(f" Transaction report saved to: {output_file}")
