@@ -2,7 +2,7 @@ import xml.etree.ElementTree as ET
 
 #Load the XML file
 try:
-    tree = ET.parse(r'C:\users\lenovo\MoMo-Data-Analysis\Data_Cleaning\modified_sms_v2.xml')
+    tree = ET.parse(r'D:\ALU\Software_Engineering\PROJECTS\MoMo-Data-Analysis\Data_Cleaning\modified_sms_v2.xml')
     root = tree.getroot()
 except ET.ParseError as e:
     print(f"Error parsing XML file: {e}")
