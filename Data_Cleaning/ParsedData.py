@@ -1,8 +1,8 @@
 import xml.etree.ElementTree as ET
 
-# Load the XML file
+#Load the XML file
 try:
-    tree = ET.parse(r'D:\ALU\Software_Engineering\PROJECTS\MoMo-Data-Analysis\Data_Cleaning\modified_sms_v2.xml')
+    tree = ET.parse(r'C:\users\lenovo\MoMo-Data-Analysis\Data_Cleaning\modified_sms_v2.xml')
     root = tree.getroot()
 except ET.ParseError as e:
     print(f"Error parsing XML file: {e}")
@@ -11,7 +11,7 @@ except FileNotFoundError:
     print("XML file not found.")
     exit()
 
-# Dictionary to store transaction counts
+#Dictionary to store transaction counts
 categories_count = {
     'Incoming Money': 0,
     'Payments to Code Holders': 0,
@@ -26,7 +26,7 @@ categories_count = {
     'Other': 0
 }
 
-# Categorization function
+#Categorization function
 def categorize_sms(body):
     body = body.lower().strip()
     if 'received' in body or 'credited' in body:
@@ -52,12 +52,18 @@ def categorize_sms(body):
     else:
         return 'Other'
 
-# Iterate through each 'sms' element in the XML
-for sms in root.findall('sms'):   
-    address = sms.get('address', 'Unknown')  # Use .get() to access attributes
-    body = sms.get('body', 'No Body Text')  # Use .get() to access attributes
-    date = sms.get('date', 'No Date')  # Use .get() to access attributes
-    message_type = categorize_sms(body) 
-    
-    # Print the extracted data
-    print(f'Sender: {address}, Body: {body}, Date: {date},Type: {message_type}') 
+#Process SMS messages
+total_sms = 0
+for sms in root.findall('.//sms'):
+    body = sms.get('body', '').strip() #Ensure no missing or empty body
+    if not body:
+        continue #Skip SMS with no body
+
+    total_sms += 1
+    category = categorize_sms(body)
+    categories_count[category] += 1
+
+#Print results
+print(f"Total SMS entries found: {total_sms}")
+for category, count in categories_count.items():
+    print(f"{category}: {count} transactions")
