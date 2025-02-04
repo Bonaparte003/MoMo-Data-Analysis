@@ -106,7 +106,23 @@ for category, transactions in categories_data.items():
     
     category_totals[category] = total_amount
 
+# Process SMS messages in order
+sms_list = []  # Stores SMS in order of appearance
 
+for sms in root.findall('.//sms'):   
+    body = sms.get('body', '').strip()  
+    if not body:
+        continue  
+
+    category = categorize_sms(body)
+    transaction_details = extract_transaction_details(body)
+    
+    # Append transaction details in order to the list
+    sms_list.append((category, transaction_details))
+
+# Sort SMS messages based on their appearance in the XML (already in order)
+for category, transaction in sms_list:
+    categories_data[category].append(transaction)
 #Process SMS messages
 total_sms = 0
 for sms in root.findall('.//sms'):
