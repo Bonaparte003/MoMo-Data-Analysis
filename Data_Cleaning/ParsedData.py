@@ -106,42 +106,6 @@ for category, transactions in categories_data.items():
     
     category_totals[category] = total_amount
 
-# Process SMS messages in order
-sms_list = []  # Stores SMS in order of appearance
-
-for sms in root.findall('.//sms'):   
-    body = sms.get('body', '').strip()  
-    if not body:
-        continue  
-
-    category = categorize_sms(body)
-    transaction_details = extract_transaction_details(body)
-    
-    # Append transaction details in order to the list
-    sms_list.append((category, transaction_details))
-
-# Sort SMS messages based on their appearance in the XML (already in order)
-for category, transaction in sms_list:
-    categories_data[category].append(transaction)
-
-# Sort SMS messages based on their appearance in the XML (already in order)
-for category, transaction in sms_list:
-    categories_data[category].append(transaction)
-
-# Calculate total transactions and money spent per category
-total_sms = len(sms_list)
-category_totals = {}
-
-for category, transactions in categories_data.items():
-    total_amount = 0
-    for txn in transactions:
-        # Extract numeric value of Amount
-        amount_value = int(txn['Amount'].replace(" RWF", "").replace(",", ""))
-        total_amount += amount_value
-    
-    category_totals[category] = total_amount
-
-
 # Save to file to avoid terminal cutoff
 output_file = r'C:\users\lenovo\MoMo-Data-Analysis\Data_Cleaning\transaction_report.txt'
 
