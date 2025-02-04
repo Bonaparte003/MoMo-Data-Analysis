@@ -2,7 +2,7 @@ import xml.etree.ElementTree as ET
 import re
 
 # Load the XML file (Replace with your actual XML file path)
-tree = ET.parse(r'C:\Users\ACER\.vscode\MoMo-Data-Analysis\Data_Cleaning\modified_sms_v2.xml')  
+tree = ET.parse(r'C:\Users\ACER\.vscode\MoMo-Data-Analysis\Data_Cleaning\modified_sms_v2 copy.xml')  
 root = tree.getroot()
 
 # Dictionary to store categorized SMS details
@@ -47,6 +47,7 @@ def categorize_sms(body):
         return 'Other' 
 
 # Function to extract transaction details from SMS body
+# Function to extract transaction details from SMS body
 def extract_transaction_details(body):
     details = {}
 
@@ -60,18 +61,23 @@ def extract_transaction_details(body):
         details['Date'] = date_match.group(1)
         details['Time'] = date_match.group(2)
 
-    # Extract Sender Name
-    sender_match = re.search(r'from\s+([\w\s]+?)(?:\s*\(|$)', body, re.IGNORECASE)
-    details['Sender'] = sender_match.group(1).strip() if sender_match else "UNKNOWN"
+    # Extract Receiver Name (for outgoing transfers)
+    receiver_match = re.search(r'transferred to\s+([\w\s]+?)\s+\((\d+)\)', body, re.IGNORECASE)
+    if receiver_match:
+        details['Receiver'] = f"{receiver_match.group(1)} ({receiver_match.group(2)})"
+        details['Sender'] = "Self"  # Since it's us sending the money
+    else:
+        # Extract Sender Name for incoming transactions
+        sender_match = re.search(r'from\s+([\w\s]+?)(?:\s*\(|$)', body, re.IGNORECASE)
+        details['Sender'] = sender_match.group(1).strip() if sender_match else "UNKNOWN"
 
     # Extract Amount
     amount_match = re.search(r'(\d{1,3}(?:,\d{3})*|\d+)\s?(RWF|Rwf|rwf)', body)
     details['Amount'] = amount_match.group(1) + " RWF" if amount_match else "0 RWF"
 
-    # Extract Transaction Fee (optional, only add if found)
-    fee_match = re.search(r'Fee\s*was\s*(\d+)\s?RWF', body, re.IGNORECASE)
-    if fee_match:
-        details['Transaction Fee'] = fee_match.group(1) + " RWF"
+    # Extract Transaction Fee
+    fee_match = re.search(r'Fee\s*was[:\s]*(\d+)\s?RWF', body, re.IGNORECASE)
+    details['Transaction Fee'] = fee_match.group(1) + " RWF" if fee_match else "0 RWF"
 
     return details
 
@@ -107,7 +113,7 @@ for category, transactions in categories_data.items():
     category_totals[category] = total_amount
 
 # Save to file to avoid terminal cutoff
-output_file = r'C:\users\lenovo\MoMo-Data-Analysis\Data_Cleaning\transaction_report.txt'
+output_file = r'C:\Users\ACER\.vscode\MoMo-Data-Analysis\Data_Cleaning\modified_sms_v2.xml'
 
 with open(output_file, 'w', encoding='utf-8') as f:
     f.write(f"\nTotal SMS entries found: {total_sms}\n\n")
@@ -135,4 +141,4 @@ with open(output_file, 'w', encoding='utf-8') as f:
         
         f.write("\n" + "="*50 + "\n\n")  # Separator for readability
 
-print(f"✅ Transaction report saved to: {output_file}")
+print(f" Transaction report saved to: {output_file}")
