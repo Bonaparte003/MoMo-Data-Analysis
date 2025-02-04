@@ -140,18 +140,35 @@ for category, transactions in categories_data.items():
         total_amount += amount_value
     
     category_totals[category] = total_amount
-#Process SMS messages
-total_sms = 0
-for sms in root.findall('.//sms'):
-    body = sms.get('body', '').strip() #Ensure no missing or empty body
-    if not body:
-        continue #Skip SMS with no body
 
-    total_sms += 1
-    category = categorize_sms(body)
-    categories_count[category] += 1
 
-#Print results
-print(f"Total SMS entries found: {total_sms}")
-for category, count in categories_count.items():
-    print(f"{category}: {count} transactions")
+# Save to file to avoid terminal cutoff
+output_file = r'C:\users\lenovo\MoMo-Data-Analysis\Data_Cleaning\transaction_report.txt'
+
+with open(output_file, 'w', encoding='utf-8') as f:
+    f.write(f"\nTotal SMS entries found: {total_sms}\n\n")
+
+    for category, transactions in categories_data.items():
+        count = len(transactions)
+        total_spent = category_totals[category]
+        
+        f.write(f"=== {category} ({count} transactions) ===\n")
+        f.write(f"Total Amount Spent: {total_spent} RWF\n\n")
+
+        if count == 0:
+            f.write("  No transactions found.\n\n")
+        else:
+            for i, txn in enumerate(transactions, start=1):
+                f.write(f"  Transaction {i}:\n")
+                for key, value in txn.items():
+                    if key == "Transaction Fee":
+                        f.write(f"    {key}: {value}\n")  # Print only if it exists
+                    elif key == "Transaction ID" and value == "UNKNOWN":
+                        f.write(f"    {key}: ERROR - Missing ID\n")  # Warn about missing ID
+                    else:
+                        f.write(f"    {key}: {value}\n")
+                f.write("\n")
+        
+        f.write("\n" + "="*50 + "\n\n")  # Separator for readability
+
+print(f"✅ Transaction report saved to: {output_file}")
