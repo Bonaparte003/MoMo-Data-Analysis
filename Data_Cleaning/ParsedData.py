@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as ET
 
-#Load the XML file
+# Load the XML file
 try:
     tree = ET.parse(r'C:\users\lenovo\MoMo-Data-Analysis\Data_Cleaning\modified_sms_v2.xml')
     root = tree.getroot()
@@ -11,24 +11,44 @@ except FileNotFoundError:
     print("XML file not found.")
     exit()
 
-#Dictionary to store transaction counts
-categories_count = {
-    'Incoming Money': 0,
-    'Payments to Code Holders': 0,
-    'Transfers to Mobile Numbers': 0,
-    'Bank Deposits': 0,
-    'Airtime Bill Payments': 0,
-    'Cash Power Bill Payments': 0,
-    'Transactions Initiated by Third Parties': 0,
-    'Withdrawals from Agents': 0,
-    'Bank Transfers': 0,
-    'Internet and Voice Bundle Purchases': 0,
-    'Other': 0
+# Dictionary to store categorized SMS details
+categories_data = {
+    'Incoming Money': [],
+    'Payments to Code Holders': [],
+    'Transfers to Mobile Numbers': [],
+    'Bank Deposits': [],
+    'Airtime Bill Payments': [],
+    'Cash Power Bill Payments': [],
+    'Transactions Initiated by Third Parties': [],
+    'Withdrawals from Agents': [],
+    'Bank Transfers': [],
+    'Internet and Voice Bundle Purchases': [],
+    'Other': []
 }
 
-#Categorization function
+# Function to categorize SMS based on keywords
 def categorize_sms(body):
-    body = body.lower().strip()
+    """
+    Categorizes the given SMS body text into predefined categories based on keywords.
+
+    Args:
+        body (str): The body text of the SMS to be categorized.
+
+    Returns:
+        str: The category of the SMS. Possible categories are:
+            - 'Incoming Money'
+            - 'Payments to Code Holders'
+            - 'Bank Deposits'
+            - 'Transfers to Mobile Numbers'
+            - 'Withdrawals from Agents'
+            - 'Airtime Bill Payments'
+            - 'Cash Power Bill Payments'
+            - 'Transactions Initiated by Third Parties'
+            - 'Bank Transfers'
+            - 'Internet and Voice Bundle Purchases'
+            - 'Other'
+    """
+    body = body.lower()
     if 'received' in body or 'credited' in body:
         return 'Incoming Money'
     elif 'payment' in body or 'code holder' in body:
@@ -50,7 +70,8 @@ def categorize_sms(body):
     elif 'bundle' in body or 'internet' in body or 'voice' in body:
         return 'Internet and Voice Bundle Purchases'
     else:
-        return 'Other'
+        return 'Other' 
+
 
 #Process SMS messages
 total_sms = 0
