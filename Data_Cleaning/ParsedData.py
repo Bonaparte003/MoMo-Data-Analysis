@@ -2,7 +2,7 @@ import xml.etree.ElementTree as ET
 
 #Load the XML file
 try:
-    tree = ET.parse(r'C:\users\lenovo\MoMo-Data-Analysis\Data_Cleaning\modified_sms_v2.xml')
+    tree = ET.parse(r'C:\Users\ACER\.vscode\MoMo-Data-Analysis\Data_Cleaning\modified_sms_v2.xml')
     root = tree.getroot()
 except ET.ParseError as e:
     print(f"Error parsing XML file: {e}")
@@ -67,3 +67,4 @@ for sms in root.findall('.//sms'):
 print(f"Total SMS entries found: {total_sms}")
 for category, count in categories_count.items():
     print(f"{category}: {count} transactions")
+
