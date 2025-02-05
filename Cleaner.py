@@ -131,17 +131,19 @@ def process_file(input_filename, output_filename):
 
 # List of categorized files to process
 categorized_files = [
-    'incoming_money.xml',
-    'payments.xml',
-    'deposit.xml',
-    'withdraw.xml',
-    'transfer.xml',
-    'third_party.xml',
-    'payment_code_holders.xml',
-    'cash_power.xml',
     'Airtime.xml',
     'Bundles.xml',
-    'rest.xml'
+    'cash_power.xml',
+    'deposit.xml',
+    'Failed.xml',
+    'incoming_money.xml',
+    'Non_transaction.xml',
+    'payment_code_holders.xml',
+    'payments.xml',
+    'reversed.xml',
+    'third_party.xml',
+    'transfer.xml',
+    'withdraw.xml',
 ]
 
 # Process each categorized file

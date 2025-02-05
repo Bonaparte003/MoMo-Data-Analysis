@@ -11,7 +11,7 @@ incoming_money = []
 payments = []
 deposit = []
 with_draw = []
-rest = []
+Non_transaction = []
 transfer = []
 third_party = []
 purchase = []
@@ -20,6 +20,8 @@ bank_deposit = []
 Airtime = []
 Bundles = []
 cash_power = []
+reversed = []
+Failed = []
 
 for element in root:
     # Check if 'body' attribute exists
@@ -54,8 +56,12 @@ for element in root:
             third_party.append(ET.tostring(element, encoding='unicode'))
         elif 'yello!umaze kugura' in body_text:
             purchase.append(ET.tostring(element, encoding='unicode'))
+        elif 'reversed' in body_text:
+            reversed.append(ET.tostring(element, encoding='unicode'))
+        elif 'failed' in body_text:
+            Failed.append(ET.tostring(element, encoding='unicode'))
         else:
-            rest.append(ET.tostring(element, encoding='unicode'))
+            Non_transaction.append(ET.tostring(element, encoding='unicode'))
 
 # Write categorized data to files
 def write_to_file(filename, data):
@@ -76,4 +82,6 @@ write_to_file('Data_Categorization/cash_power.xml', cash_power)
 Airtime.extend(purchase)
 write_to_file('Data_Categorization/Airtime.xml', Airtime)
 write_to_file('Data_Categorization/Bundles.xml', Bundles)
-write_to_file('Data_Categorization/rest.xml', rest)
+write_to_file('Data_Categorization/reversed.xml', reversed)
+write_to_file('Data_Categorization/Failed.xml', Failed)
+write_to_file('Data_Categorization/Non_transaction.xml', Non_transaction)

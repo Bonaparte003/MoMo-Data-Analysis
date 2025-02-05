@@ -1,0 +1,2482 @@
+[
+    {
+        "TransactionId": "Unknown",
+        "amount": 40000,
+        "currency": "RWF",
+        "Date": "2024-05-11",
+        "Time": "18:43:49",
+        "transaction_type": "deposit",
+        "current_balance": 40400,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-05-14",
+        "Time": "09:10:29",
+        "transaction_type": "deposit",
+        "current_balance": 5980,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-05-14",
+        "Time": "19:06:03",
+        "transaction_type": "deposit",
+        "current_balance": 5960,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-05-15",
+        "Time": "09:13:09",
+        "transaction_type": "deposit",
+        "current_balance": 5460,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-05-15",
+        "Time": "23:17:44",
+        "transaction_type": "deposit",
+        "current_balance": 5340,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-05-15",
+        "Time": "23:20:36",
+        "transaction_type": "deposit",
+        "current_balance": 10340,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-05-18",
+        "Time": "08:11:36",
+        "transaction_type": "deposit",
+        "current_balance": 5690,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-05-18",
+        "Time": "08:48:00",
+        "transaction_type": "deposit",
+        "current_balance": 9190,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-05-20",
+        "Time": "17:45:23",
+        "transaction_type": "deposit",
+        "current_balance": 5970,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-05-21",
+        "Time": "18:15:06",
+        "transaction_type": "deposit",
+        "current_balance": 6550,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-05-22",
+        "Time": "13:44:11",
+        "transaction_type": "deposit",
+        "current_balance": 6450,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-05-24",
+        "Time": "11:43:17",
+        "transaction_type": "deposit",
+        "current_balance": 6150,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-05-24",
+        "Time": "23:04:07",
+        "transaction_type": "deposit",
+        "current_balance": 5050,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-05-25",
+        "Time": "11:18:40",
+        "transaction_type": "deposit",
+        "current_balance": 6050,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-05-25",
+        "Time": "17:18:07",
+        "transaction_type": "deposit",
+        "current_balance": 9050,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-05-25",
+        "Time": "17:19:48",
+        "transaction_type": "deposit",
+        "current_balance": 14050,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 25000,
+        "currency": "RWF",
+        "Date": "2024-05-26",
+        "Time": "02:06:45",
+        "transaction_type": "deposit",
+        "current_balance": 26750,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 25000,
+        "currency": "RWF",
+        "Date": "2024-05-26",
+        "Time": "14:49:08",
+        "transaction_type": "deposit",
+        "current_balance": 25800,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-05-26",
+        "Time": "15:44:53",
+        "transaction_type": "deposit",
+        "current_balance": 10550,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-05-26",
+        "Time": "17:18:51",
+        "transaction_type": "deposit",
+        "current_balance": 10450,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-05-27",
+        "Time": "07:57:08",
+        "transaction_type": "deposit",
+        "current_balance": 5450,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 30000,
+        "currency": "RWF",
+        "Date": "2024-05-28",
+        "Time": "07:21:39",
+        "transaction_type": "deposit",
+        "current_balance": 30150,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 15000,
+        "currency": "RWF",
+        "Date": "2024-05-29",
+        "Time": "17:18:18",
+        "transaction_type": "deposit",
+        "current_balance": 16600,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-05-30",
+        "Time": "12:13:58",
+        "transaction_type": "deposit",
+        "current_balance": 5400,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-05-31",
+        "Time": "09:39:09",
+        "transaction_type": "deposit",
+        "current_balance": 5700,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-01",
+        "Time": "01:28:58",
+        "transaction_type": "deposit",
+        "current_balance": 6480,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-01",
+        "Time": "11:28:55",
+        "transaction_type": "deposit",
+        "current_balance": 9880,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 15000,
+        "currency": "RWF",
+        "Date": "2024-06-01",
+        "Time": "19:46:10",
+        "transaction_type": "deposit",
+        "current_balance": 15730,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-02",
+        "Time": "20:56:47",
+        "transaction_type": "deposit",
+        "current_balance": 5130,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-03",
+        "Time": "13:08:48",
+        "transaction_type": "deposit",
+        "current_balance": 6530,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-03",
+        "Time": "15:32:37",
+        "transaction_type": "deposit",
+        "current_balance": 6430,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-03",
+        "Time": "18:56:18",
+        "transaction_type": "deposit",
+        "current_balance": 8230,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-04",
+        "Time": "13:51:52",
+        "transaction_type": "deposit",
+        "current_balance": 5630,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-06-05",
+        "Time": "09:49:25",
+        "transaction_type": "deposit",
+        "current_balance": 10030,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 21000,
+        "currency": "RWF",
+        "Date": "2024-06-05",
+        "Time": "17:19:19",
+        "transaction_type": "deposit",
+        "current_balance": 25330,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 200000,
+        "currency": "RWF",
+        "Date": "2024-06-05",
+        "Time": "18:03:43",
+        "transaction_type": "deposit",
+        "current_balance": 200830,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-05",
+        "Time": "18:07:08",
+        "transaction_type": "deposit",
+        "current_balance": 205830,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-06",
+        "Time": "08:18:21",
+        "transaction_type": "deposit",
+        "current_balance": 6630,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-06",
+        "Time": "17:56:07",
+        "transaction_type": "deposit",
+        "current_balance": 5230,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-07",
+        "Time": "07:52:17",
+        "transaction_type": "deposit",
+        "current_balance": 5830,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-11",
+        "Time": "07:51:04",
+        "transaction_type": "deposit",
+        "current_balance": 5350,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-11",
+        "Time": "16:57:52",
+        "transaction_type": "deposit",
+        "current_balance": 5110,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-12",
+        "Time": "13:04:27",
+        "transaction_type": "deposit",
+        "current_balance": 6210,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-12",
+        "Time": "17:03:05",
+        "transaction_type": "deposit",
+        "current_balance": 6110,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-06-12",
+        "Time": "17:42:10",
+        "transaction_type": "deposit",
+        "current_balance": 13110,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-13",
+        "Time": "13:35:40",
+        "transaction_type": "deposit",
+        "current_balance": 5150,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-06-13",
+        "Time": "18:24:09",
+        "transaction_type": "deposit",
+        "current_balance": 11850,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 25000,
+        "currency": "RWF",
+        "Date": "2024-06-14",
+        "Time": "07:49:33",
+        "transaction_type": "deposit",
+        "current_balance": 29750,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-14",
+        "Time": "13:06:59",
+        "transaction_type": "deposit",
+        "current_balance": 5950,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 15000,
+        "currency": "RWF",
+        "Date": "2024-06-14",
+        "Time": "13:56:53",
+        "transaction_type": "deposit",
+        "current_balance": 16950,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 8000,
+        "currency": "RWF",
+        "Date": "2024-06-14",
+        "Time": "21:54:38",
+        "transaction_type": "deposit",
+        "current_balance": 8330,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-06-15",
+        "Time": "14:00:04",
+        "transaction_type": "deposit",
+        "current_balance": 51030,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-06-16",
+        "Time": "13:20:31",
+        "transaction_type": "deposit",
+        "current_balance": 21570,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-06-17",
+        "Time": "15:01:29",
+        "transaction_type": "deposit",
+        "current_balance": 20130,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-06-17",
+        "Time": "16:26:27",
+        "transaction_type": "deposit",
+        "current_balance": 52880,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-06-17",
+        "Time": "19:50:19",
+        "transaction_type": "deposit",
+        "current_balance": 29410,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-06-19",
+        "Time": "22:16:00",
+        "transaction_type": "deposit",
+        "current_balance": 17510,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-06-21",
+        "Time": "17:39:32",
+        "transaction_type": "deposit",
+        "current_balance": 10640,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-22",
+        "Time": "10:10:55",
+        "transaction_type": "deposit",
+        "current_balance": 6240,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-06-22",
+        "Time": "10:48:17",
+        "transaction_type": "deposit",
+        "current_balance": 14940,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-06-22",
+        "Time": "18:15:11",
+        "transaction_type": "deposit",
+        "current_balance": 26220,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-06-23",
+        "Time": "16:45:45",
+        "transaction_type": "deposit",
+        "current_balance": 20020,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-24",
+        "Time": "14:51:47",
+        "transaction_type": "deposit",
+        "current_balance": 5420,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-24",
+        "Time": "18:15:17",
+        "transaction_type": "deposit",
+        "current_balance": 5800,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-24",
+        "Time": "21:04:26",
+        "transaction_type": "deposit",
+        "current_balance": 5580,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-06-25",
+        "Time": "13:32:23",
+        "transaction_type": "deposit",
+        "current_balance": 20760,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 30000,
+        "currency": "RWF",
+        "Date": "2024-06-25",
+        "Time": "22:10:11",
+        "transaction_type": "deposit",
+        "current_balance": 34960,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-26",
+        "Time": "12:55:03",
+        "transaction_type": "deposit",
+        "current_balance": 10360,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-26",
+        "Time": "13:48:25",
+        "transaction_type": "deposit",
+        "current_balance": 5260,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 30000,
+        "currency": "RWF",
+        "Date": "2024-06-26",
+        "Time": "18:38:44",
+        "transaction_type": "deposit",
+        "current_balance": 30160,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-26",
+        "Time": "21:08:02",
+        "transaction_type": "deposit",
+        "current_balance": 5290,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-27",
+        "Time": "12:42:04",
+        "transaction_type": "deposit",
+        "current_balance": 6990,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-06-27",
+        "Time": "19:36:13",
+        "transaction_type": "deposit",
+        "current_balance": 11170,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-27",
+        "Time": "19:38:09",
+        "transaction_type": "deposit",
+        "current_balance": 16170,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-28",
+        "Time": "13:53:56",
+        "transaction_type": "deposit",
+        "current_balance": 7920,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 40000,
+        "currency": "RWF",
+        "Date": "2024-06-28",
+        "Time": "17:19:26",
+        "transaction_type": "deposit",
+        "current_balance": 44420,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 40000,
+        "currency": "RWF",
+        "Date": "2024-06-28",
+        "Time": "17:20:55",
+        "transaction_type": "deposit",
+        "current_balance": 84420,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-06-28",
+        "Time": "23:16:51",
+        "transaction_type": "deposit",
+        "current_balance": 40170,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 40000,
+        "currency": "RWF",
+        "Date": "2024-06-29",
+        "Time": "00:29:42",
+        "transaction_type": "deposit",
+        "current_balance": 41670,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-06-29",
+        "Time": "01:13:24",
+        "transaction_type": "deposit",
+        "current_balance": 55170,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 100000,
+        "currency": "RWF",
+        "Date": "2024-06-29",
+        "Time": "13:16:37",
+        "transaction_type": "deposit",
+        "current_balance": 103920,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 100000,
+        "currency": "RWF",
+        "Date": "2024-06-29",
+        "Time": "20:13:54",
+        "transaction_type": "deposit",
+        "current_balance": 113350,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 30000,
+        "currency": "RWF",
+        "Date": "2024-06-30",
+        "Time": "20:36:22",
+        "transaction_type": "deposit",
+        "current_balance": 30490,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-06-30",
+        "Time": "22:09:01",
+        "transaction_type": "deposit",
+        "current_balance": 46390,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-07-01",
+        "Time": "18:15:19",
+        "transaction_type": "deposit",
+        "current_balance": 61070,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-07-02",
+        "Time": "11:14:05",
+        "transaction_type": "deposit",
+        "current_balance": 57120,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 40000,
+        "currency": "RWF",
+        "Date": "2024-07-03",
+        "Time": "09:54:59",
+        "transaction_type": "deposit",
+        "current_balance": 49870,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 30000,
+        "currency": "RWF",
+        "Date": "2024-07-03",
+        "Time": "17:53:48",
+        "transaction_type": "deposit",
+        "current_balance": 30070,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-07-04",
+        "Time": "14:04:30",
+        "transaction_type": "deposit",
+        "current_balance": 50220,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-07-05",
+        "Time": "09:40:39",
+        "transaction_type": "deposit",
+        "current_balance": 20470,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-07-05",
+        "Time": "19:21:46",
+        "transaction_type": "deposit",
+        "current_balance": 50320,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 40000,
+        "currency": "RWF",
+        "Date": "2024-07-06",
+        "Time": "15:48:36",
+        "transaction_type": "deposit",
+        "current_balance": 54950,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-07-07",
+        "Time": "15:20:52",
+        "transaction_type": "deposit",
+        "current_balance": 17060,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-07-07",
+        "Time": "18:03:43",
+        "transaction_type": "deposit",
+        "current_balance": 19060,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-07-08",
+        "Time": "16:56:13",
+        "transaction_type": "deposit",
+        "current_balance": 52540,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 45000,
+        "currency": "RWF",
+        "Date": "2024-07-09",
+        "Time": "18:34:23",
+        "transaction_type": "deposit",
+        "current_balance": 49270,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-07-11",
+        "Time": "09:30:51",
+        "transaction_type": "deposit",
+        "current_balance": 20340,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-07-14",
+        "Time": "14:35:37",
+        "transaction_type": "deposit",
+        "current_balance": 50040,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-07-14",
+        "Time": "22:55:49",
+        "transaction_type": "deposit",
+        "current_balance": 55110,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 9000,
+        "currency": "RWF",
+        "Date": "2024-07-15",
+        "Time": "01:02:10",
+        "transaction_type": "deposit",
+        "current_balance": 9110,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-07-15",
+        "Time": "14:34:58",
+        "transaction_type": "deposit",
+        "current_balance": 24010,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 60000,
+        "currency": "RWF",
+        "Date": "2024-07-16",
+        "Time": "19:50:17",
+        "transaction_type": "deposit",
+        "current_balance": 70390,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 40000,
+        "currency": "RWF",
+        "Date": "2024-07-17",
+        "Time": "18:11:34",
+        "transaction_type": "deposit",
+        "current_balance": 42190,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-07-19",
+        "Time": "12:47:34",
+        "transaction_type": "deposit",
+        "current_balance": 13420,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-07-19",
+        "Time": "20:58:18",
+        "transaction_type": "deposit",
+        "current_balance": 28420,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-07-20",
+        "Time": "21:06:20",
+        "transaction_type": "deposit",
+        "current_balance": 21260,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-07-20",
+        "Time": "21:48:47",
+        "transaction_type": "deposit",
+        "current_balance": 20110,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-07-22",
+        "Time": "11:00:48",
+        "transaction_type": "deposit",
+        "current_balance": 20060,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-07-23",
+        "Time": "13:52:55",
+        "transaction_type": "deposit",
+        "current_balance": 12660,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-07-23",
+        "Time": "21:28:32",
+        "transaction_type": "deposit",
+        "current_balance": 10040,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 7800,
+        "currency": "RWF",
+        "Date": "2024-07-24",
+        "Time": "13:06:48",
+        "transaction_type": "deposit",
+        "current_balance": 9240,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 9000,
+        "currency": "RWF",
+        "Date": "2024-07-24",
+        "Time": "19:22:30",
+        "transaction_type": "deposit",
+        "current_balance": 9240,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-07-24",
+        "Time": "19:50:23",
+        "transaction_type": "deposit",
+        "current_balance": 52640,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-07-26",
+        "Time": "00:13:12",
+        "transaction_type": "deposit",
+        "current_balance": 22000,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 30000,
+        "currency": "RWF",
+        "Date": "2024-07-26",
+        "Time": "12:36:17",
+        "transaction_type": "deposit",
+        "current_balance": 35000,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 675000,
+        "currency": "RWF",
+        "Date": "2024-07-26",
+        "Time": "13:54:06",
+        "transaction_type": "deposit",
+        "current_balance": 675950,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-07-26",
+        "Time": "15:11:45",
+        "transaction_type": "deposit",
+        "current_balance": 685950,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-07-26",
+        "Time": "15:20:20",
+        "transaction_type": "deposit",
+        "current_balance": 54950,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-07-26",
+        "Time": "15:27:48",
+        "transaction_type": "deposit",
+        "current_balance": 58750,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-07-26",
+        "Time": "16:10:40",
+        "transaction_type": "deposit",
+        "current_balance": 17550,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-07-26",
+        "Time": "19:34:27",
+        "transaction_type": "deposit",
+        "current_balance": 56730,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 100000,
+        "currency": "RWF",
+        "Date": "2024-07-28",
+        "Time": "18:14:17",
+        "transaction_type": "deposit",
+        "current_balance": 109560,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-08-01",
+        "Time": "19:06:21",
+        "transaction_type": "deposit",
+        "current_balance": 50210,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 66000,
+        "currency": "RWF",
+        "Date": "2024-08-02",
+        "Time": "12:46:11",
+        "transaction_type": "deposit",
+        "current_balance": 112790,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-08-03",
+        "Time": "23:27:49",
+        "transaction_type": "deposit",
+        "current_balance": 53340,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-08-04",
+        "Time": "21:44:14",
+        "transaction_type": "deposit",
+        "current_balance": 23240,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-08-05",
+        "Time": "17:18:05",
+        "transaction_type": "deposit",
+        "current_balance": 10090,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-08-06",
+        "Time": "20:23:38",
+        "transaction_type": "deposit",
+        "current_balance": 20290,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-08-07",
+        "Time": "12:49:27",
+        "transaction_type": "deposit",
+        "current_balance": 53090,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-08-07",
+        "Time": "18:01:41",
+        "transaction_type": "deposit",
+        "current_balance": 54390,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 100000,
+        "currency": "RWF",
+        "Date": "2024-08-10",
+        "Time": "18:03:09",
+        "transaction_type": "deposit",
+        "current_balance": 101050,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-08-25",
+        "Time": "15:27:42",
+        "transaction_type": "deposit",
+        "current_balance": 55600,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-08-26",
+        "Time": "18:24:15",
+        "transaction_type": "deposit",
+        "current_balance": 73630,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 30000,
+        "currency": "RWF",
+        "Date": "2024-08-28",
+        "Time": "11:51:44",
+        "transaction_type": "deposit",
+        "current_balance": 43210,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 100000,
+        "currency": "RWF",
+        "Date": "2024-08-30",
+        "Time": "12:12:37",
+        "transaction_type": "deposit",
+        "current_balance": 100960,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 40000,
+        "currency": "RWF",
+        "Date": "2024-09-01",
+        "Time": "17:49:16",
+        "transaction_type": "deposit",
+        "current_balance": 51870,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-09-02",
+        "Time": "13:53:33",
+        "transaction_type": "deposit",
+        "current_balance": 50870,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-09-03",
+        "Time": "21:02:44",
+        "transaction_type": "deposit",
+        "current_balance": 51590,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-09-06",
+        "Time": "18:54:13",
+        "transaction_type": "deposit",
+        "current_balance": 20890,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-09-10",
+        "Time": "00:14:17",
+        "transaction_type": "deposit",
+        "current_balance": 53870,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-09-10",
+        "Time": "18:17:00",
+        "transaction_type": "deposit",
+        "current_balance": 58280,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-09-12",
+        "Time": "17:15:57",
+        "transaction_type": "deposit",
+        "current_balance": 54210,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 345000,
+        "currency": "RWF",
+        "Date": "2024-09-13",
+        "Time": "13:22:34",
+        "transaction_type": "deposit",
+        "current_balance": 376260,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 600000,
+        "currency": "RWF",
+        "Date": "2024-09-13",
+        "Time": "16:29:38",
+        "transaction_type": "deposit",
+        "current_balance": 625160,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-09-14",
+        "Time": "11:57:49",
+        "transaction_type": "deposit",
+        "current_balance": 50800,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 100000,
+        "currency": "RWF",
+        "Date": "2024-09-14",
+        "Time": "18:04:48",
+        "transaction_type": "deposit",
+        "current_balance": 102250,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 12000,
+        "currency": "RWF",
+        "Date": "2024-09-16",
+        "Time": "17:58:53",
+        "transaction_type": "deposit",
+        "current_balance": 12000,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-09-17",
+        "Time": "13:41:10",
+        "transaction_type": "deposit",
+        "current_balance": 50000,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-09-18",
+        "Time": "22:39:11",
+        "transaction_type": "deposit",
+        "current_balance": 23150,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-09-19",
+        "Time": "15:26:11",
+        "transaction_type": "deposit",
+        "current_balance": 52930,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-09-20",
+        "Time": "18:27:28",
+        "transaction_type": "deposit",
+        "current_balance": 50030,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-09-22",
+        "Time": "13:38:06",
+        "transaction_type": "deposit",
+        "current_balance": 65600,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-09-23",
+        "Time": "13:32:08",
+        "transaction_type": "deposit",
+        "current_balance": 10450,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 15000,
+        "currency": "RWF",
+        "Date": "2024-09-23",
+        "Time": "20:15:39",
+        "transaction_type": "deposit",
+        "current_balance": 15550,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-09-23",
+        "Time": "23:29:23",
+        "transaction_type": "deposit",
+        "current_balance": 50300,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 1050000,
+        "currency": "RWF",
+        "Date": "2024-09-24",
+        "Time": "10:41:07",
+        "transaction_type": "deposit",
+        "current_balance": 1064480,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-09-24",
+        "Time": "20:54:01",
+        "transaction_type": "deposit",
+        "current_balance": 21180,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-09-26",
+        "Time": "14:56:09",
+        "transaction_type": "deposit",
+        "current_balance": 50130,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-09-26",
+        "Time": "19:44:05",
+        "transaction_type": "deposit",
+        "current_balance": 49360,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 60000,
+        "currency": "RWF",
+        "Date": "2024-09-27",
+        "Time": "22:34:11",
+        "transaction_type": "deposit",
+        "current_balance": 61560,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-09-28",
+        "Time": "22:54:03",
+        "transaction_type": "deposit",
+        "current_balance": 56210,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 210000,
+        "currency": "RWF",
+        "Date": "2024-09-29",
+        "Time": "17:59:36",
+        "transaction_type": "deposit",
+        "current_balance": 238110,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 30000,
+        "currency": "RWF",
+        "Date": "2024-09-30",
+        "Time": "07:29:05",
+        "transaction_type": "deposit",
+        "current_balance": 35260,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 150000,
+        "currency": "RWF",
+        "Date": "2024-09-30",
+        "Time": "09:43:51",
+        "transaction_type": "deposit",
+        "current_balance": 173160,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-10-01",
+        "Time": "17:25:13",
+        "transaction_type": "deposit",
+        "current_balance": 69610,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 9000,
+        "currency": "RWF",
+        "Date": "2024-10-03",
+        "Time": "16:49:22",
+        "transaction_type": "deposit",
+        "current_balance": 9012,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 25000,
+        "currency": "RWF",
+        "Date": "2024-10-03",
+        "Time": "17:48:41",
+        "transaction_type": "deposit",
+        "current_balance": 29012,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-10-03",
+        "Time": "19:57:12",
+        "transaction_type": "deposit",
+        "current_balance": 24012,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 80000,
+        "currency": "RWF",
+        "Date": "2024-10-03",
+        "Time": "20:53:27",
+        "transaction_type": "deposit",
+        "current_balance": 88762,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-10-04",
+        "Time": "19:44:54",
+        "transaction_type": "deposit",
+        "current_balance": 20012,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 25000,
+        "currency": "RWF",
+        "Date": "2024-10-04",
+        "Time": "23:19:28",
+        "transaction_type": "deposit",
+        "current_balance": 33312,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-10-05",
+        "Time": "17:07:22",
+        "transaction_type": "deposit",
+        "current_balance": 51962,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-10-06",
+        "Time": "22:40:56",
+        "transaction_type": "deposit",
+        "current_balance": 33412,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-10-07",
+        "Time": "13:24:46",
+        "transaction_type": "deposit",
+        "current_balance": 10812,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 3000,
+        "currency": "RWF",
+        "Date": "2024-10-07",
+        "Time": "22:06:34",
+        "transaction_type": "deposit",
+        "current_balance": 10812,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-10-08",
+        "Time": "18:07:17",
+        "transaction_type": "deposit",
+        "current_balance": 51812,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-10-08",
+        "Time": "18:25:30",
+        "transaction_type": "deposit",
+        "current_balance": 15212,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-10-08",
+        "Time": "20:47:51",
+        "transaction_type": "deposit",
+        "current_balance": 12962,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 30000,
+        "currency": "RWF",
+        "Date": "2024-10-09",
+        "Time": "22:23:10",
+        "transaction_type": "deposit",
+        "current_balance": 32962,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-10-12",
+        "Time": "14:35:35",
+        "transaction_type": "deposit",
+        "current_balance": 10405,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 6000,
+        "currency": "RWF",
+        "Date": "2024-10-12",
+        "Time": "15:35:48",
+        "transaction_type": "deposit",
+        "current_balance": 6705,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-10-12",
+        "Time": "17:49:54",
+        "transaction_type": "deposit",
+        "current_balance": 52605,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 60000,
+        "currency": "RWF",
+        "Date": "2024-10-14",
+        "Time": "11:32:40",
+        "transaction_type": "deposit",
+        "current_balance": 62605,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-10-18",
+        "Time": "19:49:31",
+        "transaction_type": "deposit",
+        "current_balance": 53750,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-10-28",
+        "Time": "22:43:43",
+        "transaction_type": "deposit",
+        "current_balance": 57782,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-10-29",
+        "Time": "23:53:56",
+        "transaction_type": "deposit",
+        "current_balance": 25012,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 45000,
+        "currency": "RWF",
+        "Date": "2024-10-30",
+        "Time": "23:43:05",
+        "transaction_type": "deposit",
+        "current_balance": 45612,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-10-31",
+        "Time": "18:20:46",
+        "transaction_type": "deposit",
+        "current_balance": 12842,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-10-31",
+        "Time": "21:22:04",
+        "transaction_type": "deposit",
+        "current_balance": 56142,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-11-01",
+        "Time": "14:04:17",
+        "transaction_type": "deposit",
+        "current_balance": 22022,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-11-01",
+        "Time": "22:58:52",
+        "transaction_type": "deposit",
+        "current_balance": 56822,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-11-02",
+        "Time": "14:06:14",
+        "transaction_type": "deposit",
+        "current_balance": 23472,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-11-03",
+        "Time": "14:52:24",
+        "transaction_type": "deposit",
+        "current_balance": 28332,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 340000,
+        "currency": "RWF",
+        "Date": "2024-11-03",
+        "Time": "21:31:04",
+        "transaction_type": "deposit",
+        "current_balance": 352312,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-11-04",
+        "Time": "10:04:06",
+        "transaction_type": "deposit",
+        "current_balance": 21312,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-11-04",
+        "Time": "17:20:53",
+        "transaction_type": "deposit",
+        "current_balance": 58212,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 30000,
+        "currency": "RWF",
+        "Date": "2024-11-04",
+        "Time": "19:10:34",
+        "transaction_type": "deposit",
+        "current_balance": 37962,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 30000,
+        "currency": "RWF",
+        "Date": "2024-11-08",
+        "Time": "10:00:21",
+        "transaction_type": "deposit",
+        "current_balance": 60947,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-11-08",
+        "Time": "21:20:45",
+        "transaction_type": "deposit",
+        "current_balance": 53497,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 4000,
+        "currency": "RWF",
+        "Date": "2024-11-09",
+        "Time": "13:39:10",
+        "transaction_type": "deposit",
+        "current_balance": 5137,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 30000,
+        "currency": "RWF",
+        "Date": "2024-11-11",
+        "Time": "18:50:10",
+        "transaction_type": "deposit",
+        "current_balance": 30622,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-11-11",
+        "Time": "19:50:12",
+        "transaction_type": "deposit",
+        "current_balance": 9222,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-11-11",
+        "Time": "20:40:53",
+        "transaction_type": "deposit",
+        "current_balance": 6122,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-11-11",
+        "Time": "23:18:19",
+        "transaction_type": "deposit",
+        "current_balance": 50022,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-11-12",
+        "Time": "21:43:24",
+        "transaction_type": "deposit",
+        "current_balance": 11022,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 25000,
+        "currency": "RWF",
+        "Date": "2024-11-12",
+        "Time": "23:45:17",
+        "transaction_type": "deposit",
+        "current_balance": 33022,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-11-16",
+        "Time": "13:13:48",
+        "transaction_type": "deposit",
+        "current_balance": 20202,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 200000,
+        "currency": "RWF",
+        "Date": "2024-11-22",
+        "Time": "15:00:13",
+        "transaction_type": "deposit",
+        "current_balance": 200185,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-11-24",
+        "Time": "12:20:25",
+        "transaction_type": "deposit",
+        "current_balance": 66922,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-11-25",
+        "Time": "15:32:28",
+        "transaction_type": "deposit",
+        "current_balance": 15822,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-11-26",
+        "Time": "11:32:50",
+        "transaction_type": "deposit",
+        "current_balance": 51422,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 250000,
+        "currency": "RWF",
+        "Date": "2024-11-26",
+        "Time": "22:45:43",
+        "transaction_type": "deposit",
+        "current_balance": 265552,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-11-28",
+        "Time": "14:41:07",
+        "transaction_type": "deposit",
+        "current_balance": 55452,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-11-29",
+        "Time": "01:09:21",
+        "transaction_type": "deposit",
+        "current_balance": 39582,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-11-29",
+        "Time": "23:13:36",
+        "transaction_type": "deposit",
+        "current_balance": 51712,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 100000,
+        "currency": "RWF",
+        "Date": "2024-11-30",
+        "Time": "14:22:02",
+        "transaction_type": "deposit",
+        "current_balance": 110992,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 200000,
+        "currency": "RWF",
+        "Date": "2024-11-30",
+        "Time": "16:34:05",
+        "transaction_type": "deposit",
+        "current_balance": 279492,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-12-03",
+        "Time": "21:03:18",
+        "transaction_type": "deposit",
+        "current_balance": 51424,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 30000,
+        "currency": "RWF",
+        "Date": "2024-12-05",
+        "Time": "17:59:53",
+        "transaction_type": "deposit",
+        "current_balance": 30624,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-12-07",
+        "Time": "12:56:26",
+        "transaction_type": "deposit",
+        "current_balance": 59124,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-12-08",
+        "Time": "19:25:23",
+        "transaction_type": "deposit",
+        "current_balance": 50792,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-12-09",
+        "Time": "23:43:35",
+        "transaction_type": "deposit",
+        "current_balance": 22242,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 8000,
+        "currency": "RWF",
+        "Date": "2024-12-10",
+        "Time": "13:34:34",
+        "transaction_type": "deposit",
+        "current_balance": 8742,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-12-11",
+        "Time": "13:33:37",
+        "transaction_type": "deposit",
+        "current_balance": 10142,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-12-11",
+        "Time": "14:58:07",
+        "transaction_type": "deposit",
+        "current_balance": 13042,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-12-11",
+        "Time": "17:29:34",
+        "transaction_type": "deposit",
+        "current_balance": 52942,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 200000,
+        "currency": "RWF",
+        "Date": "2024-12-12",
+        "Time": "11:10:37",
+        "transaction_type": "deposit",
+        "current_balance": 240642,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-12-13",
+        "Time": "13:00:38",
+        "transaction_type": "deposit",
+        "current_balance": 85142,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-12-16",
+        "Time": "10:53:25",
+        "transaction_type": "deposit",
+        "current_balance": 30191,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-12-20",
+        "Time": "11:50:28",
+        "transaction_type": "deposit",
+        "current_balance": 21992,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 15000,
+        "currency": "RWF",
+        "Date": "2024-12-21",
+        "Time": "12:01:26",
+        "transaction_type": "deposit",
+        "current_balance": 16642,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-12-22",
+        "Time": "11:46:11",
+        "transaction_type": "deposit",
+        "current_balance": 52742,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-12-22",
+        "Time": "20:25:57",
+        "transaction_type": "deposit",
+        "current_balance": 13832,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-12-22",
+        "Time": "21:49:11",
+        "transaction_type": "deposit",
+        "current_balance": 13732,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-12-23",
+        "Time": "00:41:47",
+        "transaction_type": "deposit",
+        "current_balance": 51132,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 40000,
+        "currency": "RWF",
+        "Date": "2024-12-23",
+        "Time": "03:16:04",
+        "transaction_type": "deposit",
+        "current_balance": 48282,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-12-23",
+        "Time": "18:09:17",
+        "transaction_type": "deposit",
+        "current_balance": 58032,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 30000,
+        "currency": "RWF",
+        "Date": "2024-12-23",
+        "Time": "21:49:24",
+        "transaction_type": "deposit",
+        "current_balance": 72532,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-12-27",
+        "Time": "19:24:26",
+        "transaction_type": "deposit",
+        "current_balance": 78434,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 30000,
+        "currency": "RWF",
+        "Date": "2024-12-28",
+        "Time": "21:22:51",
+        "transaction_type": "deposit",
+        "current_balance": 35864,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-12-29",
+        "Time": "14:01:49",
+        "transaction_type": "deposit",
+        "current_balance": 66864,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-12-30",
+        "Time": "00:52:09",
+        "transaction_type": "deposit",
+        "current_balance": 58364,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2025-01-02",
+        "Time": "19:39:49",
+        "transaction_type": "deposit",
+        "current_balance": 15672,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2025-01-02",
+        "Time": "23:14:15",
+        "transaction_type": "deposit",
+        "current_balance": 11922,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 40000,
+        "currency": "RWF",
+        "Date": "2025-01-03",
+        "Time": "20:40:07",
+        "transaction_type": "deposit",
+        "current_balance": 46222,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 30000,
+        "currency": "RWF",
+        "Date": "2025-01-06",
+        "Time": "18:49:15",
+        "transaction_type": "deposit",
+        "current_balance": 30737,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2025-01-08",
+        "Time": "22:10:26",
+        "transaction_type": "deposit",
+        "current_balance": 52899,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2025-01-12",
+        "Time": "18:29:25",
+        "transaction_type": "deposit",
+        "current_balance": 67873,
+        "fee": 0
+    }
+]

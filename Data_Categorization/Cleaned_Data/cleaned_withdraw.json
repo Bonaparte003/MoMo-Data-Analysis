@@ -1,0 +1,35 @@
+[
+    {
+        "agent": "Agent Sophia ",
+        "TransactionId": "14098463509",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-05-26",
+        "Time": "02:10:27",
+        "transaction_type": "withdraw",
+        "current_balance": 6400,
+        "fee": 350
+    },
+    {
+        "agent": "Agent Sophia ",
+        "TransactionId": "17006777609",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-11-23",
+        "Time": "13:23:44",
+        "transaction_type": "withdraw",
+        "current_balance": 2401,
+        "fee": 1100
+    },
+    {
+        "agent": "Agent John ",
+        "TransactionId": "17007580507",
+        "amount": 24000,
+        "currency": "RWF",
+        "Date": "2024-11-23",
+        "Time": "14:09:27",
+        "transaction_type": "withdraw",
+        "current_balance": 61892,
+        "fee": 600
+    }
+]

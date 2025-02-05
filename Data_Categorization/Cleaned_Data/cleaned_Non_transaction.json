@@ -1,0 +1,102 @@
+[
+    {
+        "TransactionId": "Unknown",
+        "amount": 0,
+        "currency": "Unknown",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 0,
+        "currency": "Unknown",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 0,
+        "currency": "Unknown",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 0,
+        "currency": "Unknown",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 0,
+        "currency": "Unknown",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 0,
+        "currency": "Unknown",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 3000,
+        "currency": "RWF",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 0,
+        "currency": "Unknown",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 0,
+        "currency": "Unknown",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 0,
+        "currency": "Unknown",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "deposit",
+        "current_balance": 0,
+        "fee": 0
+    }
+]
