@@ -17,7 +17,7 @@ def extract_data(body_text, filename):
     sender_pattern = re.compile(r'by\s+([\w\s]+?)\s+on your MOMO account', re.IGNORECASE)
     third_party_sender_pattern = re.compile(r'by\s+([\w\s]+?)\s+on your MOMO account', re.IGNORECASE)
     cash_power_token = re.compile(r'with token\s+([\d-]+)', re.IGNORECASE)
-    fee_pattern = re.compile(r'Fee (?:was|paid):\s+([\d,]+)\s+RWF', re.IGNORECASE)
+    fee_pattern = re.compile(r'\bfee\b.*?(\d+(?:,\d{3})*(?:\.\d{2})?)', re.IGNORECASE)
     #phone_number_pattern = re.compile(r'\((\d+)\)', re.IGNORECASE)
     agent = re.compile(r'Agent:\s+([\w\s]+)', re.IGNORECASE)
 
