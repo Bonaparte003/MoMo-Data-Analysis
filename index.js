@@ -31,14 +31,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    document.getElementById('file').addEventListener('change', function(event) {
+    document.getElementById('file').addEventListener('change', async function(event) {
         const file = event.target.files[0];
         if (file) {
             const reader = new FileReader();
-            reader.onload = function(e) { // Define the onload event handler
+            reader.onload = async function(e) { // Define the onload event handler
                 const fileContent = e.target.result; // Get the file content
                 var file_content = fileContent; // Display the file content
                 console.log(file_content); // Log the file content to the console
+
+                // Use the File System Access API to save the file content
+                try {
+                    const handle = await window.showSaveFilePicker({
+                        suggestedName: 'modified_sms_v2.xml',
+                        types: [{
+                            description: 'XML Files',
+                            accept: {'application/xml': ['.xml']}
+                        }]
+                    });
+                    const writable = await handle.createWritable();
+                    await writable.write(file_content);
+                    await writable.close();
+                    console.log('File saved successfully');
+                } catch (error) {
+                    console.error('Error:', error);
+                }
             };
             reader.readAsText(file); // Read the file as text
         }
