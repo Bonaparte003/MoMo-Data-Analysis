@@ -50,30 +50,31 @@ import sqlite3
 conn = sqlite3.connect('data.db')
 cursor = conn.cursor()
 
-cursor.execute(
+sqlstatements= [
     """CREATE TABLE IF NOT EXISTS Airtime (
     TxId TEXT PRIMARY KEY NOT NULL,
     Amount INT, 
     CURRENCY TEXT,
     Date DATE,
-    TIME TIME, 
+    TIME DATE, 
     Type TEXT, 
     Balance INT, 
     Fee INT
-    );
+    );""",
     
-    CREATE TABLE IF NOT EXISTS Bundles(
+    """CREATE TABLE IF NOT EXISTS Bundles(
     TxId TEXT PRIMARY KEY NOT NULL,
     Amount INT,
     CURRENCY TEXT,
     Date DATE,
-    TIME TIME,
+    TIME DATE,
     Type TEXT,
     Balance INT,
     Fee INT
     );
+    """,
     
-    CREATE TABLE IF NOT EXISTS Cash_Power(
+    """CREATE TABLE IF NOT EXISTS Cash_Power(
     TxId TEXT PRIMARY KEY NOT NULL,
     TOKEN TEXT,
     Amount INT,
@@ -83,9 +84,9 @@ cursor.execute(
     Type TEXT,
     Balance INT,
     Fee INT
-    );
+    );""",
     
-    CREATE TABLE IF NOT EXISTS Deposit(
+    """CREATE TABLE IF NOT EXISTS Deposit(
     AMOUNT INT,
     CURRENCY TEXT,
     Date DATE,
@@ -93,9 +94,9 @@ cursor.execute(
     Type TEXT,
     Balance INT,
     Fee INT
-    );
+    );""",
     
-    CREATE TABLE IF NOT EXISTS Incoming-Money(
+    """CREATE TABLE IF NOT EXISTS Incoming_Money(
     SENDER TEXT,
     AMOUNT INT,
     CURRENCY TEXT,
@@ -104,9 +105,9 @@ cursor.execute(
     Type TEXT,
     Balance INT,
     Fee INT
-    );
+    );""",
     
-    CREATE TABLE IF NOT EXISTS Payments(
+    """CREATE TABLE IF NOT EXISTS Payments(
     TxId TEXT PRIMARY KEY NOT NULL,
     RECIEVER TEXT,
     PHONE_NUMBER TEXT,
@@ -117,31 +118,31 @@ cursor.execute(
     Type TEXT,
     Balance INT,
     Fee INT
-    );
+    );""",
     
     
-    CREATE TABLE IF NOT EXISTS FAILED_TRANSACTIONS(
+    """CREATE TABLE IF NOT EXISTS FAILED_TRANSACTIONS(
     TxId TEXT PRIMARY KEY NOT NULL,
     RECIEVER TEXT,
     AMOUNT INT,
     CURRENCY TEXT,
     Date DATE,
     TIME TIME,
-    Type TEXT,
-    );
+    Type TEXT
+    );""",
     
-    CREATE TABLE IF NOT EXISTS REVERSED_TRANSACTIONS(
+    """CREATE TABLE IF NOT EXISTS REVERSED_TRANSACTIONS(
     RECEIVER TEXT,
     AMOUNT INT,
     CURRENCY TEXT,
     Date DATE,
     TIME TIME,
     Type TEXT,
-    BALANCE INT,
-    );
+    BALANCE INT
+    );""",
     
     
-    CREATE TABLE IF NOT EXISTS THIRD_PARTY(
+    """CREATE TABLE IF NOT EXISTS THIRD_PARTY(
     TxId TEXT PRIMARY KEY NOT NULL,
     SENDER TEXT,
     AMOUNT INT,
@@ -151,10 +152,10 @@ cursor.execute(
     Type TEXT,
     Balance INT,
     Fee INT
-    );
+    );""",
     
     
-    CREATE TABLE IF NOT EXISTS Transfer(
+    """CREATE TABLE IF NOT EXISTS Transfer(
     RECEIVER TEXT,
     PHONE_NUMBER TEXT,
     AMOUNT INT,
@@ -164,9 +165,9 @@ cursor.execute(
     Type TEXT,
     Balance INT,
     Fee INT
-    );
+    );""",
     
-    CREATE TABLE IF NOT EXISTS WITHDRAW(
+    """CREATE TABLE IF NOT EXISTS WITHDRAW(
     TxId TEXT PRIMARY KEY NOT NULL,
     AGENT TEXT,
     AMOUNT INT,
@@ -176,12 +177,14 @@ cursor.execute(
     Type TEXT,
     Balance INT,
     Fee INT
-    );
+    );""",
     
-    CREATE TABLE IF NOT EXISTS NON-TRANSACTION(
+    """CREATE TABLE IF NOT EXISTS NON_TRANSACTION(
     NUMBER INT);"""
-)
+]
 
+for statement in sqlstatements:
+    cursor.execute(statement)
 conn.commit()
 
 json_files = [
@@ -198,3 +201,4 @@ json_files = [
     'cleaned_withdraw.json',
     'cleaned_rest.json'
 ]
+
