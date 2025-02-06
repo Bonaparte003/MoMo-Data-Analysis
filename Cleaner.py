@@ -11,17 +11,20 @@ def extract_data(body_text, filename):
     amount_pattern = re.compile(r'\b(\d+(?:,\d{3})*(?:\.\d{2})?)\s*(RWF)\b')
     date_pattern = re.compile(r'(\d{4}-\d{2}-\d{2})\s+(\d{2}:\d{2}:\d{2})')
     transaction_type_pattern = re.compile(r'\b(received|payment|withdraw|deposit|transfer|purchase|bundle|cash power)\b', re.IGNORECASE)
-    transaction_Id = re.compile(r'(TxId|Transaction ID|Financial Transaction Id)[:\s]+(\w+)', re.IGNORECASE)
+    transaction_Id = re.compile(r'(TxId|Transaction ID|Financial Transaction Id|Transaction Id)[:\s]+(\w+)', re.IGNORECASE)
     receiver_pattern = re.compile(r'transferred to\s+([\w\s]+?)\s+\((\d+)\)|to\s+([\w\s]+?)\s+with token', re.IGNORECASE)
     current_balance_pattern = re.compile(r'New\s+balance\s*:\s*([\d,]+)\s*RWF|Your\s+new\s+balance\s*:\s*([\d,]+)\s*RWF', re.IGNORECASE)
-    sender_pattern = re.compile(r'by\s+([\w\s]+?)\s+on your MOMO account', re.IGNORECASE)
+    sender_pattern = re.compile(r'received\s+\d+\s+RWF\s+from\s+([\w\s]+?)\s+\(\*+\d+\)', re.IGNORECASE)
     third_party_sender_pattern = re.compile(r'by\s+([\w\s]+?)\s+on your MOMO account', re.IGNORECASE)
     cash_power_token = re.compile(r'with token\s+([\d-]+)', re.IGNORECASE)
     fee_pattern = re.compile(r'\bfee\b.*?(\d+(?:,\d{3})*(?:\.\d{2})?)', re.IGNORECASE)
-    #phone_number_pattern = re.compile(r'\((\d+)\)', re.IGNORECASE)
     agent = re.compile(r'Agent:\s+([\w\s]+)', re.IGNORECASE)
+    # reversed data
+    reversed_names = re.compile(r'to\s+([\w\s]+?)\s+\((\d+)\)|to\s+([\w\s]+?)\s+with token', re.IGNORECASE)
+    balance_reversed = re.compile(r'Your\s+new\s+balance\s+is\s*([\d,]+)\s*RWF', re.IGNORECASE)
+    failed_transaction_pattern = re.compile(r'Your transaction to\s+([\w\s]+?)\s+\((\d+)\)\s+with\s+(\d+)\s+RWF\s+has been reversed at\s+(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})', re.IGNORECASE)
 
-    if filename == 'transfer.xml' or filename == 'payments.xml':
+    if filename == 'transfer.xml':
         receiver_match = receiver_pattern.search(body_text)
         if receiver_match:
             data['receiver'] = receiver_match.group(1) or receiver_match.group(3)
@@ -46,8 +49,22 @@ def extract_data(body_text, filename):
         agent_match = agent.search(body_text)
         data['agent'] = agent_match.group(1) if agent_match else 'Unknown'
     
-    TransactionId_match = transaction_Id.search(body_text)
-    data['TransactionId'] = TransactionId_match.group(2) if TransactionId_match else 'Unknown'
+    if filename == 'Failed.xml':
+        failed_match = failed_transaction_pattern.search(body_text)
+        if failed_match:
+            data['receiver'] = failed_match.group(1)
+            data['phone_number'] = failed_match.group(2)
+            data['amount'] = int(failed_match.group(3))
+            data['reversed_at'] = failed_match.group(4)
+        else:
+            data['receiver'] = 'Unknown'
+            data['phone_number'] = 'Unknown'
+            data['amount'] = 0
+            data['reversed_at'] = 'Unknown'
+    
+    if filename in ["Airtime.xml", "Bundles.xml", "cash_power.xml", "Failed.xml", "payment_code_holders.xml", "payments.xml", "payments.xml"]:
+        TransactionId_match = transaction_Id.search(body_text)
+        data['TransactionId'] = TransactionId_match.group(2) if TransactionId_match else 'Unknown'
     
     amount_match = amount_pattern.search(body_text)
     if amount_match:
@@ -102,6 +119,24 @@ def extract_data(body_text, filename):
         data['current_balance'] = new_balance
     else:
         data['current_balance'] = 0
+    
+    if filename == "reversed.xml":
+        balance_reversed_match = balance_reversed.search(body_text)
+        if balance_reversed_match:
+            current_balance = balance_reversed_match.group(1)
+            current_balance = current_balance.replace(',', '')
+            data['current_balance'] = int(current_balance)
+        else:
+            data['current_balance'] = 0
+
+        reversed_name_match = reversed_names.search(body_text)
+        if reversed_name_match:
+            data['receiver'] = reversed_name_match.group(1) or reversed_name_match.group(3)
+            data['phone_number'] = ('+' + reversed_name_match.group(2)) if reversed_name_match.group(2) else 'Unknown'
+            data['transaction_type'] = 'reversed'
+        else:
+            data['receiver'] = 'Unknown'
+            data['phone_number'] = 'Unknown'
 
     fee_match = fee_pattern.search(body_text)
     data['fee'] = int(fee_match.group(1).replace(',', '')) if fee_match else 0
