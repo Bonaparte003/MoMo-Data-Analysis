@@ -17,7 +17,7 @@ def extract_data(body_text, filename):
     sender_pattern = re.compile(r'by\s+([\w\s]+?)\s+on your MOMO account', re.IGNORECASE)
     third_party_sender_pattern = re.compile(r'by\s+([\w\s]+?)\s+on your MOMO account', re.IGNORECASE)
     cash_power_token = re.compile(r'with token\s+([\d-]+)', re.IGNORECASE)
-    fee_pattern = re.compile(r'Fee (?:was|paid):\s+([\d,]+)\s+RWF', re.IGNORECASE)
+    fee_pattern = re.compile(r'\bfee\b.*?(\d+(?:,\d{3})*(?:\.\d{2})?)', re.IGNORECASE)
     #phone_number_pattern = re.compile(r'\((\d+)\)', re.IGNORECASE)
     agent = re.compile(r'Agent:\s+([\w\s]+)', re.IGNORECASE)
 
@@ -131,20 +131,21 @@ def process_file(input_filename, output_filename):
 
 # List of categorized files to process
 categorized_files = [
-    'incoming_money.xml',
-    'payments.xml',
-    'deposit.xml',
-    'withdraw.xml',
-    'transfer.xml',
-    'third_party.xml',
-    'payment_code_holders.xml',
-    'cash_power.xml',
     'Airtime.xml',
     'Bundles.xml',
-    'rest.xml'
+    'cash_power.xml',
+    'deposit.xml',
+    'Failed.xml',
+    'incoming_money.xml',
+    'Non_transaction.xml',
+    'payment_code_holders.xml',
+    'payments.xml',
+    'reversed.xml',
+    'third_party.xml',
+    'transfer.xml',
+    'withdraw.xml',
 ]
 
-# Process each categorized file
 for filename in categorized_files:
     input_path = os.path.join('Data_Categorization', filename)
     output_path = os.path.join('Data_Categorization', 'Cleaned_Data', f'cleaned_{filename.replace(".xml", ".json")}')
