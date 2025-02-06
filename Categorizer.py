@@ -4,7 +4,11 @@ import os
 # Ensure the directory exists
 os.makedirs('Data_Categorization', exist_ok=True)
 
+<<<<<<< HEAD
 tree = ET.parse(r'C:\users\lenovo\MoMo-Data-Analysis\modified_sms_v2.xml')
+=======
+tree = ET.parse(r'C:\Users\Seyi Adebayo\Searches\MoMo-Data-Analysis\modified_sms_v2.xml')
+>>>>>>> 848689a2f086fd7f268b1391f3d463aa4806ed68
 root = tree.getroot()
 print(ET.tostring(root))
 
