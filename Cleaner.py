@@ -146,7 +146,6 @@ categorized_files = [
     'withdraw.xml',
 ]
 
-# Process each categorized file
 for filename in categorized_files:
     input_path = os.path.join('Data_Categorization', filename)
     output_path = os.path.join('Data_Categorization', 'Cleaned_Data', f'cleaned_{filename.replace(".xml", ".json")}')

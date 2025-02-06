@@ -4,8 +4,9 @@ import os
 # Ensure the directory exists
 os.makedirs('Data_Categorization', exist_ok=True)
 
-tree = ET.parse(r'C:\users\lenovo\MoMo-Data-Analysis\modified_sms_v2.xml')
+tree = ET.parse(r'D:\ALU\Software_Engineering\PROJECTS\MoMo-Data-Analysis\modified_sms_v2.xml')
 root = tree.getroot()
+print(ET.tostring(root))
 
 incoming_money = []
 payments = []
