@@ -22,7 +22,12 @@ def extract_data(body_text, filename):
     # reversed data
     reversed_names = re.compile(r'to\s+([\w\s]+?)\s+\((\d+)\)|to\s+([\w\s]+?)\s+with token', re.IGNORECASE)
     balance_reversed = re.compile(r'Your\s+new\s+balance\s+is\s*([\d,]+)\s*RWF', re.IGNORECASE)
-    failed_transaction_pattern = re.compile(r'Your transaction to\s+([\w\s]+?)\s+\((\d+)\)\s+with\s+(\d+)\s+RWF\s+has been reversed at\s+(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})', re.IGNORECASE)
+    failed_transaction_pattern = re.compile(
+        r'amount\s+(\d+)\s+RWF\s+for\s+([\w\s]+)\s+with\s+message:\s+([\d\w\s]+)\s+failed\s+at\s+(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})',
+        re.IGNORECASE
+    )
+    code_holders_names_codes = re.compile(r'to\s+([\w\s\w\s]+?)\s+(\d+)')
+    receiver_payment = re.compile(r'to\s+([\w\s\w\s]+?)\s+(with token)')
 
     if filename == 'transfer.xml':
         receiver_match = receiver_pattern.search(body_text)
@@ -33,6 +38,23 @@ def extract_data(body_text, filename):
             data['receiver'] = 'Unknown'
             data['phone_number'] = 'Unknown'
     
+
+    if filename == "payment_code_holders.xml":
+        receiver_match = code_holders_names_codes.search(body_text)
+        if receiver_match:
+            data['receiver'] = receiver_match.group(1)
+            data['code'] = int(receiver_match.group(2))
+        else:
+            data['receiver'] = 'Unknown'
+            data['code'] = 0
+    
+    if filename == "payments.xml":
+        receiver_match = receiver_payment.search(body_text)
+        if receiver_match:
+            data['receiver'] = receiver_match.group(1)
+        else:
+            data['receiver'] = 'Unknown'
+
     if filename == 'incoming_money.xml':
         sender_match = sender_pattern.search(body_text)
         data['sender'] = sender_match.group(1) if sender_match else 'Unknown'
@@ -52,17 +74,18 @@ def extract_data(body_text, filename):
     if filename == 'Failed.xml':
         failed_match = failed_transaction_pattern.search(body_text)
         if failed_match:
-            data['receiver'] = failed_match.group(1)
-            data['phone_number'] = failed_match.group(2)
-            data['amount'] = int(failed_match.group(3))
-            data['reversed_at'] = failed_match.group(4)
+            data['receiver'] = failed_match.group(2)
+            data['amount'] = int(failed_match.group(1))
+            if "Data Bundle" in data['receiver'] or "Bundles and Packs" in data['receiver']:
+                data['type'] = "data_purchase"
+            else:
+                data['type'] = "normal_transaction"
         else:
-            data['receiver'] = 'Unknown'
-            data['phone_number'] = 'Unknown'
+            data['receiver'] = 'MTN'
             data['amount'] = 0
-            data['reversed_at'] = 'Unknown'
+            data['type'] = 'Mtn_Bundles'
     
-    if filename in ["Airtime.xml", "Bundles.xml", "cash_power.xml", "Failed.xml", "payment_code_holders.xml", "payments.xml", "payments.xml"]:
+    if filename in ["Airtime.xml", "Bundles.xml", "cash_power.xml", "payment_code_holders.xml", "payments.xml", "payments.xml"]:
         TransactionId_match = transaction_Id.search(body_text)
         data['TransactionId'] = TransactionId_match.group(2) if TransactionId_match else 'Unknown'
     
@@ -110,15 +133,17 @@ def extract_data(body_text, filename):
             data['transaction_type'] = 'failed'
         else:
             data['transaction_type'] = 'unknown'
+    
+    if filename != "Failed.xml":
 
-    current_balance_match = current_balance_pattern.search(body_text)
-    if current_balance_match:
-        current_balance = current_balance_match.group(1) or current_balance_match.group(2)
-        current_balance = current_balance.replace(',', '')
-        new_balance = int(current_balance.replace('RWF', ''))
-        data['current_balance'] = new_balance
-    else:
-        data['current_balance'] = 0
+        current_balance_match = current_balance_pattern.search(body_text)
+        if current_balance_match:
+            current_balance = current_balance_match.group(1) or current_balance_match.group(2)
+            current_balance = current_balance.replace(',', '')
+            new_balance = int(current_balance.replace('RWF', ''))
+            data['current_balance'] = new_balance
+        else:
+            data['current_balance'] = 0
     
     if filename == "reversed.xml":
         balance_reversed_match = balance_reversed.search(body_text)
