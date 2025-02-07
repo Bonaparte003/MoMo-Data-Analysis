@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 GREEN='\033[0;32m'
 NC='\033[0m'
 

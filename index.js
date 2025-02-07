@@ -38,24 +38,31 @@ document.addEventListener('DOMContentLoaded', function() {
             reader.onload = async function(e) { // Define the onload event handler
                 const fileContent = e.target.result; // Get the file content
                 var file_content = fileContent; // Display the file content
-                console.log(file_content); // Log the file content to the console
+                if (file_content){}
+                fetch('http://127.0.0.1:8000/file', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: file_content,
+                })
 
                 // Use the File System Access API to save the file content
-                try {
-                    const handle = await window.showSaveFilePicker({
-                        suggestedName: 'modified_sms_v2.xml',
-                        types: [{
-                            description: 'XML Files',
-                            accept: {'application/xml': ['.xml']}
-                        }]
-                    });
-                    const writable = await handle.createWritable();
-                    await writable.write(file_content);
-                    await writable.close();
-                    console.log('File saved successfully');
-                } catch (error) {
-                    console.error('Error:', error);
-                }
+                // try {
+                //     const handle = await window.showSaveFilePicker({
+                //         suggestedName: 'modified_sms_v2.xml',
+                //         types: [{
+                //             description: 'XML Files',
+                //             accept: {'application/xml': ['.xml']}
+                //         }]
+                //     });
+                //     const writable = await handle.createWritable();
+                //     await writable.write(file_content);
+                //     await writable.close();
+                //     console.log('File saved successfully');
+                // } catch (error) {
+                //     console.error('Error:', error);
+                // }
             };
             reader.readAsText(file); // Read the file as text
         }
