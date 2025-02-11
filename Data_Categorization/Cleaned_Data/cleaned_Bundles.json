@@ -1,0 +1,372 @@
+[
+    {
+        "TransactionId": "14324965479",
+        "amount": 2000,
+        "currency": "RWF",
+        "Date": "2024-06-11",
+        "Time": "06:26:11",
+        "transaction_type": "payment",
+        "current_balance": 350,
+        "fee": 0
+    },
+    {
+        "TransactionId": "14443130677",
+        "amount": 2000,
+        "currency": "RWF",
+        "Date": "2024-06-19",
+        "Time": "18:15:53",
+        "transaction_type": "payment",
+        "current_balance": 3810,
+        "fee": 0
+    },
+    {
+        "TransactionId": "14569120894",
+        "amount": 2000,
+        "currency": "RWF",
+        "Date": "2024-06-28",
+        "Time": "18:00:22",
+        "transaction_type": "payment",
+        "current_balance": 30170,
+        "fee": 0
+    },
+    {
+        "TransactionId": "14655104674",
+        "amount": 500,
+        "currency": "RWF",
+        "Date": "2024-07-04",
+        "Time": "14:02:53",
+        "transaction_type": "payment",
+        "current_balance": 220,
+        "fee": 0
+    },
+    {
+        "TransactionId": "14756781450",
+        "amount": 500,
+        "currency": "RWF",
+        "Date": "2024-07-11",
+        "Time": "09:25:46",
+        "transaction_type": "payment",
+        "current_balance": 340,
+        "fee": 0
+    },
+    {
+        "TransactionId": "14807754878",
+        "amount": 2000,
+        "currency": "RWF",
+        "Date": "2024-07-14",
+        "Time": "15:19:17",
+        "transaction_type": "bundle",
+        "current_balance": 27570,
+        "fee": 0
+    },
+    {
+        "TransactionId": "14909215103",
+        "amount": 200,
+        "currency": "RWF",
+        "Date": "2024-07-21",
+        "Time": "18:19:26",
+        "transaction_type": "payment",
+        "current_balance": 60,
+        "fee": 0
+    },
+    {
+        "TransactionId": "14940294542",
+        "amount": 500,
+        "currency": "RWF",
+        "Date": "2024-07-23",
+        "Time": "21:22:15",
+        "transaction_type": "payment",
+        "current_balance": 40,
+        "fee": 0
+    },
+    {
+        "TransactionId": "14969968017",
+        "amount": 2000,
+        "currency": "RWF",
+        "Date": "2024-07-26",
+        "Time": "00:10:38",
+        "transaction_type": "payment",
+        "current_balance": 2000,
+        "fee": 0
+    },
+    {
+        "TransactionId": "15064161618",
+        "amount": 3000,
+        "currency": "RWF",
+        "Date": "2024-08-01",
+        "Time": "13:22:02",
+        "transaction_type": "payment",
+        "current_balance": 24960,
+        "fee": 0
+    },
+    {
+        "TransactionId": "15070248766",
+        "amount": 500,
+        "currency": "RWF",
+        "Date": "2024-08-01",
+        "Time": "19:03:14",
+        "transaction_type": "payment",
+        "current_balance": 210,
+        "fee": 0
+    },
+    {
+        "TransactionId": "15097735991",
+        "amount": 1000,
+        "currency": "RWF",
+        "Date": "2024-08-03",
+        "Time": "16:42:06",
+        "transaction_type": "payment",
+        "current_balance": 4940,
+        "fee": 0
+    },
+    {
+        "TransactionId": "15126906031",
+        "amount": 200,
+        "currency": "RWF",
+        "Date": "2024-08-05",
+        "Time": "17:15:24",
+        "transaction_type": "payment",
+        "current_balance": 90,
+        "fee": 0
+    },
+    {
+        "TransactionId": "15146128209",
+        "amount": 1000,
+        "currency": "RWF",
+        "Date": "2024-08-06",
+        "Time": "20:22:06",
+        "transaction_type": "payment",
+        "current_balance": 290,
+        "fee": 0
+    },
+    {
+        "TransactionId": "15178525743",
+        "amount": 1000,
+        "currency": "RWF",
+        "Date": "2024-08-08",
+        "Time": "21:19:16",
+        "transaction_type": "payment",
+        "current_balance": 5170,
+        "fee": 0
+    },
+    {
+        "TransactionId": "15475262766",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-08-29",
+        "Time": "09:30:34",
+        "transaction_type": "payment",
+        "current_balance": 6260,
+        "fee": 0
+    },
+    {
+        "TransactionId": "15606505500",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-09-06",
+        "Time": "16:37:52",
+        "transaction_type": "bundle",
+        "current_balance": 890,
+        "fee": 0
+    },
+    {
+        "TransactionId": "15681666953",
+        "amount": 3000,
+        "currency": "RWF",
+        "Date": "2024-09-11",
+        "Time": "15:43:54",
+        "transaction_type": "payment",
+        "current_balance": 11330,
+        "fee": 0
+    },
+    {
+        "TransactionId": "15783543056",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-09-18",
+        "Time": "14:17:11",
+        "transaction_type": "payment",
+        "current_balance": 12850,
+        "fee": 0
+    },
+    {
+        "TransactionId": "15930732191",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-09-28",
+        "Time": "13:16:02",
+        "transaction_type": "bundle",
+        "current_balance": 11310,
+        "fee": 0
+    },
+    {
+        "TransactionId": "16040688508",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-10-04",
+        "Time": "08:27:12",
+        "transaction_type": "bundle",
+        "current_balance": 3512,
+        "fee": 0
+    },
+    {
+        "TransactionId": "16181431637",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-10-11",
+        "Time": "16:39:11",
+        "transaction_type": "bundle",
+        "current_balance": 24655,
+        "fee": 0
+    },
+    {
+        "TransactionId": "16211799078",
+        "amount": 3000,
+        "currency": "RWF",
+        "Date": "2024-10-13",
+        "Time": "09:37:49",
+        "transaction_type": "payment",
+        "current_balance": 25605,
+        "fee": 0
+    },
+    {
+        "TransactionId": "16269196928",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-10-16",
+        "Time": "10:48:32",
+        "transaction_type": "bundle",
+        "current_balance": 128151,
+        "fee": 0
+    },
+    {
+        "TransactionId": "16356106165",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-10-20",
+        "Time": "21:07:16",
+        "transaction_type": "bundle",
+        "current_balance": 122472,
+        "fee": 0
+    },
+    {
+        "TransactionId": "16684572153",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-11-06",
+        "Time": "22:27:32",
+        "transaction_type": "bundle",
+        "current_balance": 41167,
+        "fee": 0
+    },
+    {
+        "TransactionId": "16811450681",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-11-13",
+        "Time": "13:13:44",
+        "transaction_type": "bundle",
+        "current_balance": 7022,
+        "fee": 0
+    },
+    {
+        "TransactionId": "16813007600",
+        "amount": 2000,
+        "currency": "RWF",
+        "Date": "2024-11-13",
+        "Time": "14:44:42",
+        "transaction_type": "payment",
+        "current_balance": 5022,
+        "fee": 0
+    },
+    {
+        "TransactionId": "16870426837",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-11-16",
+        "Time": "13:14:55",
+        "transaction_type": "bundle",
+        "current_balance": 10202,
+        "fee": 0
+    },
+    {
+        "TransactionId": "17146971568",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-11-30",
+        "Time": "12:48:40",
+        "transaction_type": "bundle",
+        "current_balance": 12012,
+        "fee": 0
+    },
+    {
+        "TransactionId": "17194680435",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-12-02",
+        "Time": "18:12:28",
+        "transaction_type": "bundle",
+        "current_balance": 103944,
+        "fee": 0
+    },
+    {
+        "TransactionId": "17417124626",
+        "amount": 3000,
+        "currency": "RWF",
+        "Date": "2024-12-13",
+        "Time": "16:30:08",
+        "transaction_type": "payment",
+        "current_balance": 51892,
+        "fee": 0
+    },
+    {
+        "TransactionId": "17469774285",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-12-16",
+        "Time": "08:58:31",
+        "transaction_type": "bundle",
+        "current_balance": 10191,
+        "fee": 0
+    },
+    {
+        "TransactionId": "17725876735",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-12-28",
+        "Time": "08:02:55",
+        "transaction_type": "bundle",
+        "current_balance": 5864,
+        "fee": 0
+    },
+    {
+        "TransactionId": "18044804543",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2025-01-12",
+        "Time": "14:20:37",
+        "transaction_type": "bundle",
+        "current_balance": 17873,
+        "fee": 0
+    },
+    {
+        "TransactionId": "18064613724",
+        "amount": 3000,
+        "currency": "RWF",
+        "Date": "2025-01-13",
+        "Time": "14:42:09",
+        "transaction_type": "payment",
+        "current_balance": 983950,
+        "fee": 0
+    },
+    {
+        "TransactionId": "18087757600",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2025-01-14",
+        "Time": "17:29:36",
+        "transaction_type": "bundle",
+        "current_balance": 88000,
+        "fee": 0
+    }
+]

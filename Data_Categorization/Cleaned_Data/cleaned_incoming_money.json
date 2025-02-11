@@ -1,0 +1,632 @@
+[
+    {
+        "sender": "Jane Smith",
+        "amount": 2000,
+        "currency": "RWF",
+        "Date": "2024-05-10",
+        "Time": "16:30:51",
+        "transaction_type": "received",
+        "current_balance": 2000,
+        "fee": 0
+    },
+    {
+        "sender": "Samuel Carter",
+        "amount": 25000,
+        "currency": "RWF",
+        "Date": "2024-05-14",
+        "Time": "20:57:36",
+        "transaction_type": "received",
+        "current_balance": 29060,
+        "fee": 0
+    },
+    {
+        "sender": "Linda Green",
+        "amount": 1400,
+        "currency": "RWF",
+        "Date": "2024-05-19",
+        "Time": "01:49:09",
+        "transaction_type": "received",
+        "current_balance": 4590,
+        "fee": 0
+    },
+    {
+        "sender": "Linda Green",
+        "amount": 200,
+        "currency": "RWF",
+        "Date": "2024-05-29",
+        "Time": "14:00:51",
+        "transaction_type": "received",
+        "current_balance": 1600,
+        "fee": 0
+    },
+    {
+        "sender": "Alex Doe",
+        "amount": 12000,
+        "currency": "RWF",
+        "Date": "2024-06-07",
+        "Time": "16:08:33",
+        "transaction_type": "received",
+        "current_balance": 17310,
+        "fee": 0
+    },
+    {
+        "sender": "Linda Green",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-18",
+        "Time": "14:08:05",
+        "transaction_type": "received",
+        "current_balance": 14110,
+        "fee": 0
+    },
+    {
+        "sender": "Samuel Carter",
+        "amount": 3700,
+        "currency": "RWF",
+        "Date": "2024-06-19",
+        "Time": "20:26:00",
+        "transaction_type": "received",
+        "current_balance": 7510,
+        "fee": 0
+    },
+    {
+        "sender": "Samuel Carter",
+        "amount": 1500,
+        "currency": "RWF",
+        "Date": "2024-06-21",
+        "Time": "13:44:47",
+        "transaction_type": "received",
+        "current_balance": 4140,
+        "fee": 0
+    },
+    {
+        "sender": "Samuel Carter",
+        "amount": 1500,
+        "currency": "RWF",
+        "Date": "2024-06-23",
+        "Time": "12:15:45",
+        "transaction_type": "received",
+        "current_balance": 15620,
+        "fee": 0
+    },
+    {
+        "sender": "Samuel Carter",
+        "amount": 1000,
+        "currency": "RWF",
+        "Date": "2024-06-30",
+        "Time": "19:15:29",
+        "transaction_type": "received",
+        "current_balance": 4590,
+        "fee": 0
+    },
+    {
+        "sender": "Jane Smith",
+        "amount": 170,
+        "currency": "RWF",
+        "Date": "2024-07-10",
+        "Time": "23:47:08",
+        "transaction_type": "received",
+        "current_balance": 840,
+        "fee": 0
+    },
+    {
+        "sender": "Linda Green",
+        "amount": 300,
+        "currency": "RWF",
+        "Date": "2024-07-20",
+        "Time": "21:20:40",
+        "transaction_type": "received",
+        "current_balance": 3210,
+        "fee": 0
+    },
+    {
+        "sender": "Samuel Carter",
+        "amount": 4000,
+        "currency": "RWF",
+        "Date": "2024-09-01",
+        "Time": "19:32:19",
+        "transaction_type": "received",
+        "current_balance": 13370,
+        "fee": 0
+    },
+    {
+        "sender": "Samuel Carter",
+        "amount": 200000,
+        "currency": "RWF",
+        "Date": "2024-09-06",
+        "Time": "19:06:17",
+        "transaction_type": "received",
+        "current_balance": 216090,
+        "fee": 0
+    },
+    {
+        "sender": "Robert Brown",
+        "amount": 50,
+        "currency": "RWF",
+        "Date": "2024-09-06",
+        "Time": "21:11:07",
+        "transaction_type": "received",
+        "current_balance": 193040,
+        "fee": 0
+    },
+    {
+        "sender": "Robert Brown",
+        "amount": 1300,
+        "currency": "RWF",
+        "Date": "2024-09-13",
+        "Time": "22:55:34",
+        "transaction_type": "received",
+        "current_balance": 6340,
+        "fee": 0
+    },
+    {
+        "sender": "Linda Green",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-09-19",
+        "Time": "21:17:46",
+        "transaction_type": "received",
+        "current_balance": 42530,
+        "fee": 0
+    },
+    {
+        "sender": "Jane Smith",
+        "amount": 15000,
+        "currency": "RWF",
+        "Date": "2024-09-22",
+        "Time": "15:45:32",
+        "transaction_type": "received",
+        "current_balance": 32850,
+        "fee": 0
+    },
+    {
+        "sender": "Jane Smith",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-09-25",
+        "Time": "01:23:04",
+        "transaction_type": "received",
+        "current_balance": 24080,
+        "fee": 0
+    },
+    {
+        "sender": "Linda Green",
+        "amount": 93252,
+        "currency": "RWF",
+        "Date": "2024-10-02",
+        "Time": "15:35:42",
+        "transaction_type": "received",
+        "current_balance": 109362,
+        "fee": 0
+    },
+    {
+        "sender": "Robert Brown",
+        "amount": 82000,
+        "currency": "RWF",
+        "Date": "2024-10-02",
+        "Time": "23:10:50",
+        "transaction_type": "received",
+        "current_balance": 140612,
+        "fee": 0
+    },
+    {
+        "sender": "Linda Green",
+        "amount": 132443,
+        "currency": "RWF",
+        "Date": "2024-10-10",
+        "Time": "16:50:02",
+        "transaction_type": "received",
+        "current_balance": 148205,
+        "fee": 0
+    },
+    {
+        "sender": "Jane Smith",
+        "amount": 132996,
+        "currency": "RWF",
+        "Date": "2024-10-16",
+        "Time": "10:00:05",
+        "transaction_type": "received",
+        "current_balance": 133151,
+        "fee": 0
+    },
+    {
+        "sender": "Alex Doe",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-10-18",
+        "Time": "23:00:18",
+        "transaction_type": "received",
+        "current_balance": 26250,
+        "fee": 0
+    },
+    {
+        "sender": "Linda Green",
+        "amount": 133072,
+        "currency": "RWF",
+        "Date": "2024-10-20",
+        "Time": "18:56:20",
+        "transaction_type": "received",
+        "current_balance": 133072,
+        "fee": 0
+    },
+    {
+        "sender": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-10-23",
+        "Time": "09:59:01",
+        "transaction_type": "received",
+        "current_balance": 81022,
+        "fee": 0
+    },
+    {
+        "sender": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-10-23",
+        "Time": "16:43:03",
+        "transaction_type": "received",
+        "current_balance": 55672,
+        "fee": 0
+    },
+    {
+        "sender": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-10-25",
+        "Time": "00:33:00",
+        "transaction_type": "received",
+        "current_balance": 21382,
+        "fee": 0
+    },
+    {
+        "sender": "Unknown",
+        "amount": 20000,
+        "currency": "RWF",
+        "Date": "2024-10-25",
+        "Time": "05:48:00",
+        "transaction_type": "received",
+        "current_balance": 21032,
+        "fee": 0
+    },
+    {
+        "sender": "Robert Brown",
+        "amount": 4000,
+        "currency": "RWF",
+        "Date": "2024-10-25",
+        "Time": "23:10:51",
+        "transaction_type": "received",
+        "current_balance": 22932,
+        "fee": 0
+    },
+    {
+        "sender": "Unknown",
+        "amount": 50000,
+        "currency": "RWF",
+        "Date": "2024-10-26",
+        "Time": "21:52:01",
+        "transaction_type": "received",
+        "current_balance": 50932,
+        "fee": 0
+    },
+    {
+        "sender": "Unknown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-11-05",
+        "Time": "21:55:02",
+        "transaction_type": "received",
+        "current_balance": 10212,
+        "fee": 0
+    },
+    {
+        "sender": "Samuel Carter",
+        "amount": 133855,
+        "currency": "RWF",
+        "Date": "2024-11-06",
+        "Time": "12:54:32",
+        "transaction_type": "received",
+        "current_balance": 142667,
+        "fee": 0
+    },
+    {
+        "sender": "Robert Brown",
+        "amount": 66305,
+        "currency": "RWF",
+        "Date": "2024-11-09",
+        "Time": "20:11:51",
+        "transaction_type": "received",
+        "current_balance": 68842,
+        "fee": 0
+    },
+    {
+        "sender": "Linda Green",
+        "amount": 27800,
+        "currency": "RWF",
+        "Date": "2024-11-10",
+        "Time": "01:03:33",
+        "transaction_type": "received",
+        "current_balance": 78622,
+        "fee": 0
+    },
+    {
+        "sender": "Robert Brown",
+        "amount": 134160,
+        "currency": "RWF",
+        "Date": "2024-11-13",
+        "Time": "23:03:44",
+        "transaction_type": "received",
+        "current_balance": 136682,
+        "fee": 0
+    },
+    {
+        "sender": "Samuel Carter",
+        "amount": 201940,
+        "currency": "RWF",
+        "Date": "2024-11-14",
+        "Time": "19:56:45",
+        "transaction_type": "received",
+        "current_balance": 209372,
+        "fee": 0
+    },
+    {
+        "sender": "Jane Smith",
+        "amount": 134346,
+        "currency": "RWF",
+        "Date": "2024-11-17",
+        "Time": "13:12:05",
+        "transaction_type": "received",
+        "current_balance": 135748,
+        "fee": 0
+    },
+    {
+        "sender": "Samuel Carter",
+        "amount": 134438,
+        "currency": "RWF",
+        "Date": "2024-11-18",
+        "Time": "17:39:07",
+        "transaction_type": "received",
+        "current_balance": 153736,
+        "fee": 0
+    },
+    {
+        "sender": "Robert Brown",
+        "amount": 134901,
+        "currency": "RWF",
+        "Date": "2024-11-21",
+        "Time": "11:36:54",
+        "transaction_type": "received",
+        "current_balance": 138437,
+        "fee": 0
+    },
+    {
+        "sender": "Alex Doe",
+        "amount": 134468,
+        "currency": "RWF",
+        "Date": "2024-11-21",
+        "Time": "20:55:54",
+        "transaction_type": "received",
+        "current_balance": 135435,
+        "fee": 0
+    },
+    {
+        "sender": "Alex Doe",
+        "amount": 1200,
+        "currency": "RWF",
+        "Date": "2024-11-22",
+        "Time": "13:58:23",
+        "transaction_type": "received",
+        "current_balance": 10285,
+        "fee": 0
+    },
+    {
+        "sender": "Robert Brown",
+        "amount": 134591,
+        "currency": "RWF",
+        "Date": "2024-11-23",
+        "Time": "13:40:59",
+        "transaction_type": "received",
+        "current_balance": 136992,
+        "fee": 0
+    },
+    {
+        "sender": "Jane Smith",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-11-27",
+        "Time": "08:18:01",
+        "transaction_type": "received",
+        "current_balance": 70052,
+        "fee": 0
+    },
+    {
+        "sender": "Robert Brown",
+        "amount": 11000,
+        "currency": "RWF",
+        "Date": "2024-11-29",
+        "Time": "23:15:19",
+        "transaction_type": "received",
+        "current_balance": 19012,
+        "fee": 0
+    },
+    {
+        "sender": "Linda Green",
+        "amount": 271202,
+        "currency": "RWF",
+        "Date": "2024-11-30",
+        "Time": "19:46:14",
+        "transaction_type": "received",
+        "current_balance": 320244,
+        "fee": 0
+    },
+    {
+        "sender": "Jane Smith",
+        "amount": 135179,
+        "currency": "RWF",
+        "Date": "2024-12-13",
+        "Time": "19:00:25",
+        "transaction_type": "received",
+        "current_balance": 174871,
+        "fee": 0
+    },
+    {
+        "sender": "Linda Green",
+        "amount": 135140,
+        "currency": "RWF",
+        "Date": "2024-12-14",
+        "Time": "23:18:23",
+        "transaction_type": "received",
+        "current_balance": 135291,
+        "fee": 0
+    },
+    {
+        "sender": "Samuel Carter",
+        "amount": 8000,
+        "currency": "RWF",
+        "Date": "2024-12-15",
+        "Time": "16:02:32",
+        "transaction_type": "received",
+        "current_balance": 63991,
+        "fee": 0
+    },
+    {
+        "sender": "Samuel Carter",
+        "amount": 21800,
+        "currency": "RWF",
+        "Date": "2024-12-15",
+        "Time": "16:04:07",
+        "transaction_type": "received",
+        "current_balance": 54791,
+        "fee": 0
+    },
+    {
+        "sender": "Linda Green",
+        "amount": 135121,
+        "currency": "RWF",
+        "Date": "2024-12-17",
+        "Time": "08:18:54",
+        "transaction_type": "received",
+        "current_balance": 135692,
+        "fee": 0
+    },
+    {
+        "sender": "Alex Doe",
+        "amount": 27000,
+        "currency": "RWF",
+        "Date": "2024-12-23",
+        "Time": "21:48:36",
+        "transaction_type": "received",
+        "current_balance": 42532,
+        "fee": 0
+    },
+    {
+        "sender": "Samuel Carter",
+        "amount": 135852,
+        "currency": "RWF",
+        "Date": "2024-12-24",
+        "Time": "22:58:37",
+        "transaction_type": "received",
+        "current_balance": 154134,
+        "fee": 0
+    },
+    {
+        "sender": "Robert Brown",
+        "amount": 10000,
+        "currency": "RWF",
+        "Date": "2024-12-26",
+        "Time": "00:01:03",
+        "transaction_type": "received",
+        "current_balance": 132834,
+        "fee": 0
+    },
+    {
+        "sender": "Linda Green",
+        "amount": 343285,
+        "currency": "RWF",
+        "Date": "2024-12-30",
+        "Time": "13:21:50",
+        "transaction_type": "received",
+        "current_balance": 360379,
+        "fee": 0
+    },
+    {
+        "sender": "Jane Smith",
+        "amount": 135983,
+        "currency": "RWF",
+        "Date": "2024-12-31",
+        "Time": "13:42:07",
+        "transaction_type": "received",
+        "current_balance": 164962,
+        "fee": 0
+    },
+    {
+        "sender": "Robert Brown",
+        "amount": 500,
+        "currency": "RWF",
+        "Date": "2024-12-31",
+        "Time": "20:08:55",
+        "transaction_type": "received",
+        "current_balance": 97112,
+        "fee": 0
+    },
+    {
+        "sender": "Robert Brown",
+        "amount": 343136,
+        "currency": "RWF",
+        "Date": "2025-01-02",
+        "Time": "14:00:02",
+        "transaction_type": "received",
+        "current_balance": 376348,
+        "fee": 0
+    },
+    {
+        "sender": "Linda Green",
+        "amount": 136135,
+        "currency": "RWF",
+        "Date": "2025-01-05",
+        "Time": "16:47:28",
+        "transaction_type": "received",
+        "current_balance": 143087,
+        "fee": 0
+    },
+    {
+        "sender": "Linda Green",
+        "amount": 74312,
+        "currency": "RWF",
+        "Date": "2025-01-06",
+        "Time": "20:12:59",
+        "transaction_type": "received",
+        "current_balance": 103549,
+        "fee": 0
+    },
+    {
+        "sender": "Robert Brown",
+        "amount": 136044,
+        "currency": "RWF",
+        "Date": "2025-01-09",
+        "Time": "19:59:47",
+        "transaction_type": "received",
+        "current_balance": 148243,
+        "fee": 0
+    },
+    {
+        "sender": "Robert Brown",
+        "amount": 8000,
+        "currency": "RWF",
+        "Date": "2025-01-10",
+        "Time": "21:40:23",
+        "transaction_type": "received",
+        "current_balance": 56393,
+        "fee": 0
+    },
+    {
+        "sender": "Jane Smith",
+        "amount": 964177,
+        "currency": "RWF",
+        "Date": "2025-01-13",
+        "Time": "14:40:42",
+        "transaction_type": "received",
+        "current_balance": 986950,
+        "fee": 0
+    }
+]

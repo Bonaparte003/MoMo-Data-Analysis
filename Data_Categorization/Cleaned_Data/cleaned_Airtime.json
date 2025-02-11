@@ -1,0 +1,362 @@
+[
+    {
+        "TransactionId": "13913173274",
+        "amount": 2000,
+        "currency": "RWF",
+        "Date": "2024-05-12",
+        "Time": "11:41:28",
+        "transaction_type": "payment",
+        "current_balance": 25280,
+        "fee": 0
+    },
+    {
+        "TransactionId": "14121530824",
+        "amount": 2000,
+        "currency": "RWF",
+        "Date": "2024-05-27",
+        "Time": "18:40:46",
+        "transaction_type": "payment",
+        "current_balance": 150,
+        "fee": 0
+    },
+    {
+        "TransactionId": "14303889432",
+        "amount": 2000,
+        "currency": "RWF",
+        "Date": "2024-06-09",
+        "Time": "14:58:25",
+        "transaction_type": "payment",
+        "current_balance": 3350,
+        "fee": 0
+    },
+    {
+        "TransactionId": "14304661948",
+        "amount": 1000,
+        "currency": "RWF",
+        "Date": "2024-06-09",
+        "Time": "15:58:28",
+        "transaction_type": "payment",
+        "current_balance": 2350,
+        "fee": 0
+    },
+    {
+        "TransactionId": "14412904724",
+        "amount": 200,
+        "currency": "RWF",
+        "Date": "2024-06-17",
+        "Time": "14:57:47",
+        "transaction_type": "payment",
+        "current_balance": 130,
+        "fee": 0
+    },
+    {
+        "TransactionId": "14413610551",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-06-17",
+        "Time": "15:54:55",
+        "transaction_type": "payment",
+        "current_balance": 15130,
+        "fee": 0
+    },
+    {
+        "TransactionId": "14551117248",
+        "amount": 2000,
+        "currency": "RWF",
+        "Date": "2024-06-27",
+        "Time": "15:06:43",
+        "transaction_type": "payment",
+        "current_balance": 1990,
+        "fee": 0
+    },
+    {
+        "TransactionId": "14568668252",
+        "amount": 2000,
+        "currency": "RWF",
+        "Date": "2024-06-28",
+        "Time": "17:38:18",
+        "transaction_type": "payment",
+        "current_balance": 32170,
+        "fee": 0
+    },
+    {
+        "TransactionId": "14628107159",
+        "amount": 3000,
+        "currency": "RWF",
+        "Date": "2024-07-02",
+        "Time": "17:42:37",
+        "transaction_type": "payment",
+        "current_balance": 11370,
+        "fee": 0
+    },
+    {
+        "TransactionId": "15180796103",
+        "amount": 2000,
+        "currency": "RWF",
+        "Date": "2024-08-09",
+        "Time": "08:04:48",
+        "transaction_type": "payment",
+        "current_balance": 3170,
+        "fee": 0
+    },
+    {
+        "TransactionId": "15512525928",
+        "amount": 2000,
+        "currency": "RWF",
+        "Date": "2024-08-31",
+        "Time": "17:15:19",
+        "transaction_type": "payment",
+        "current_balance": 28670,
+        "fee": 0
+    },
+    {
+        "TransactionId": "15538355693",
+        "amount": 3000,
+        "currency": "RWF",
+        "Date": "2024-09-02",
+        "Time": "11:07:16",
+        "transaction_type": "payment",
+        "current_balance": 870,
+        "fee": 0
+    },
+    {
+        "TransactionId": "15594922933",
+        "amount": 3000,
+        "currency": "RWF",
+        "Date": "2024-09-05",
+        "Time": "20:02:44",
+        "transaction_type": "payment",
+        "current_balance": 12490,
+        "fee": 0
+    },
+    {
+        "TransactionId": "16803083833",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "2024-11-12",
+        "Time": "23:51:04",
+        "transaction_type": "payment",
+        "current_balance": 28022,
+        "fee": 0
+    },
+    {
+        "TransactionId": "17868470140",
+        "amount": 2000,
+        "currency": "RWF",
+        "Date": "2025-01-03",
+        "Time": "18:56:21",
+        "transaction_type": "payment",
+        "current_balance": 6222,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 2000,
+        "currency": "RWF",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 2000,
+        "currency": "RWF",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 2000,
+        "currency": "RWF",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 500,
+        "currency": "RWF",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 500,
+        "currency": "RWF",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 200,
+        "currency": "RWF",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 500,
+        "currency": "RWF",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 2000,
+        "currency": "RWF",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 3000,
+        "currency": "RWF",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 500,
+        "currency": "RWF",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 1000,
+        "currency": "RWF",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 200,
+        "currency": "RWF",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 1000,
+        "currency": "RWF",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 1000,
+        "currency": "RWF",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 3000,
+        "currency": "RWF",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 5000,
+        "currency": "RWF",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 3000,
+        "currency": "RWF",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 2000,
+        "currency": "RWF",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 3000,
+        "currency": "RWF",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    },
+    {
+        "TransactionId": "Unknown",
+        "amount": 3000,
+        "currency": "RWF",
+        "Date": "Unknown",
+        "Time": "Unknown",
+        "transaction_type": "unknown",
+        "current_balance": 0,
+        "fee": 0
+    }
+]
