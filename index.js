@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const reader = new FileReader();
         reader.onload = async function (e) {
             file_content = e.target.result;
+            alert('File uploaded successfully!');
 
             if (file_content) {
                 showLoading('Uploading file...');
@@ -81,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         headers: { 'Content-Type': 'text/plain' },
                         body: file_content,
                     });
+                    alert('Uploaded');
 
                     if (!response.ok) throw new Error('File upload failed.');
                     
@@ -91,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (responseData.status === 'success') {
                         showLoading('Fetching database results...');
                         try {
-                            const databaseResponse = await fetch('c');
+                            const databaseResponse = await fetch('http://127.0.0.1:8000/database_return');
                             if (!databaseResponse.ok) throw new Error('Database fetch failed.');
 
                             const databaseData = await databaseResponse.json();
