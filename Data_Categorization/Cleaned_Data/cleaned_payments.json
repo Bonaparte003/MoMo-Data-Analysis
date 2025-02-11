@@ -1,7 +1,6 @@
 [
     {
         "receiver": "ONAFRIQ MAURITIUS",
-        "phone_number": "Unknown",
         "TransactionId": "14977177408",
         "amount": 673000,
         "currency": "RWF",
@@ -13,7 +12,6 @@
     },
     {
         "receiver": "ONAFRIQ MAURITIUS",
-        "phone_number": "Unknown",
         "TransactionId": "14977293553",
         "amount": 45000,
         "currency": "RWF",
@@ -25,7 +23,6 @@
     },
     {
         "receiver": "ONAFRIQ MAURITIUS",
-        "phone_number": "Unknown",
         "TransactionId": "14977386817",
         "amount": 50000,
         "currency": "RWF",
@@ -37,7 +34,6 @@
     },
     {
         "receiver": "ONAFRIQ MAURITIUS",
-        "phone_number": "Unknown",
         "TransactionId": "15183763430",
         "amount": 2000,
         "currency": "RWF",
@@ -49,7 +45,6 @@
     },
     {
         "receiver": "ONAFRIQ MAURITIUS",
-        "phone_number": "Unknown",
         "TransactionId": "15204526240",
         "amount": 90000,
         "currency": "RWF",
@@ -61,7 +56,6 @@
     },
     {
         "receiver": "WASAC",
-        "phone_number": "Unknown",
         "TransactionId": "17841214930",
         "amount": 322726,
         "currency": "RWF",

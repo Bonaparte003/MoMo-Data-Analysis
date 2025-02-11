@@ -20,6 +20,7 @@ body{
     display: flex;
     flex-direction: row;
     border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
     transition: all 0.2s ease-in-out;
 }
 nav{
@@ -28,11 +29,16 @@ nav{
     flex-direction: column;
     align-items: center;
     border-radius: 10px 0 0 10px;
+    
 }
 
 .sub-container{
     flex: 15;
-    background-color: rgb(242, 242, 242);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(244, 247, 247);
     border-top-left-radius: 0;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
@@ -143,4 +149,281 @@ li{
 
 .file-label i {
     font-size: 24px; /* Adjust the size of the icon */
+}
+/*Home section*/
+.home-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(168, 183, 252); */
+    height: calc(100% - 3%);
+    width: 97%;
+    gap: 20px;
+}
+.home-container{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: rgb(118, 238, 202); */
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.cash_flow{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cash_flow > div{
+    position: relative;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 25px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+.title{
+    font-size: 30px;
+    background-color: #ffbb00;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.cash_in, .cash_out, .fees, .balance{
+    background-color: white;
+}
+
+
+.cash_flow > div p{
+    float: left;
+    background-color: rgb(241, 241, 241);
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+.cash_in h2{
+    color: rgb(4, 182, 4);
+}
+.cash_out{
+    color: red;
+}
+.fees{
+    color: #d39c03;
+}
+
+
+
+.transactions{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* background-color: bisque; */
+    height: 100%;
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+.controler{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.topper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.transactions .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-color: #ffbb00;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.time-filters{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.transactions .search{
+    flex:2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0px;
+    
+}
+
+.transactions .calendar{
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.transactions .search .placeholder{
+    padding: 12px 20px;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    transition: all 0.2s ease-in-out;
+}
+.transactions .search .placeholder:focus{
+    padding: 12px 30px;
+    outline: transparent;
+}
+
+.transactions .search .placeholder:active{
+    padding: 12px 30px;
+    border: #d39c03;
+}
+.transactions .search .fa-search{
+    padding: 12px 20px;
+    background-color: #ffbb00;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+}
+.filter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.filter .transaction_types > a{
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #ffbb00;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.filter .transaction_types > a:hover{
+    background-color: #e0a800;
+}
+/*tables*/
+.table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+.table table {
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #000000;
+    font-weight: bold;
+    color: white;
+    border-radius: 2px;
+}
+
+.table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table td {
+    color: #333;
+}
+
+/*Alert*/
+.custom-alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+}
+
+.custom-alert.show {
+    display: block;
+}
+
+/*loading*/
+/* Loading overlay */
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 9999;
+}
+
+/* Custom alert */
+.custom-alert {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.custom-alert.show {
+    opacity: 1;
+}
+
+.custom-alert.error {
+    background: red;
 }

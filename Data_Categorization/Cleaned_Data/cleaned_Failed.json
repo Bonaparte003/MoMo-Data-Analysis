@@ -1,52 +1,52 @@
 [
     {
-        "TransactionId": "Unknown",
+        "receiver": "ESICIA LTD",
         "amount": 14200,
+        "type": "normal_transaction",
         "currency": "RWF",
         "Date": "2024-09-21",
         "Time": "15:49:01",
         "transaction_type": "failed",
-        "current_balance": 0,
         "fee": 0
     },
     {
-        "TransactionId": "Unknown",
+        "receiver": "ESICIA LTD",
         "amount": 11600,
+        "type": "normal_transaction",
         "currency": "RWF",
         "Date": "2024-10-11",
         "Time": "14:00:00",
         "transaction_type": "failed",
-        "current_balance": 0,
         "fee": 0
     },
     {
-        "TransactionId": "16803066185",
+        "receiver": "MTN",
         "amount": 5000,
+        "type": "Mtn_Bundles",
         "currency": "RWF",
         "Date": "2024-11-12",
         "Time": "23:47:47",
         "transaction_type": "payment",
-        "current_balance": 0,
         "fee": 0
     },
     {
-        "TransactionId": "16803076383",
+        "receiver": "MTN",
         "amount": 5000,
+        "type": "Mtn_Bundles",
         "currency": "RWF",
         "Date": "2024-11-12",
         "Time": "23:49:39",
         "transaction_type": "payment",
-        "current_balance": 0,
         "fee": 0
     },
     {
-        "TransactionId": "Unknown",
+        "receiver": "MTN",
         "amount": 5000,
+        "type": "Mtn_Bundles",
         "currency": "RWF",
         "Date": "2024-11-12",
         "Time": "23:58:00",
         "transaction_type": "bundle",
-        "current_balance": 0,
         "fee": 0
     }
 ]

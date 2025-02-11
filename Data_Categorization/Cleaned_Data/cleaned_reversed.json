@@ -1,12 +1,13 @@
 [
     {
-        "TransactionId": "Unknown",
         "amount": 3000,
         "currency": "RWF",
         "Date": "2024-10-07",
         "Time": "14:37:00",
-        "transaction_type": "unknown",
-        "current_balance": 0,
+        "transaction_type": "reversed",
+        "current_balance": 10312,
+        "receiver": "Mediatrice UWAYISENGA",
+        "phone_number": "+250788658286",
         "fee": 0
     }
 ]

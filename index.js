@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const logo = document.querySelector('.logo');
     const navLinks = document.querySelectorAll('.nav-link');
     const navLinkTexts = document.querySelectorAll('.nav-link p');
@@ -8,75 +8,122 @@ document.addEventListener('DOMContentLoaded', function() {
     const budget = document.querySelector('.budget-section');
     const bot = document.querySelector('.bot-section');
     const settings = document.querySelector('.settings-section');
-    var file_content = '';
+    const fileInput = document.getElementById('file');
+    let file_content = '';
 
+    // Function to show loading overlay
+    function showLoading(message) {
+        let loadingDiv = document.getElementById('loading-overlay');
+        if (!loadingDiv) {
+            loadingDiv = document.createElement('div');
+            loadingDiv.id = 'loading-overlay';
+            loadingDiv.innerHTML = `<div class="loading-message">${message}</div>`;
+            document.body.appendChild(loadingDiv);
+        }
+        loadingDiv.style.display = 'flex';
+    }
+
+    // Function to hide loading overlay
+    function hideLoading() {
+        const loadingDiv = document.getElementById('loading-overlay');
+        if (loadingDiv) {
+            loadingDiv.style.display = 'none';
+        }
+    }
+
+    // Function to show a section
     function showSection(sectionToShow) {
         const sections = [home, addFile, print, budget, bot, settings];
         sections.forEach(section => section.style.display = 'none');
-        sectionToShow.style.display = 'block';
+        sectionToShow.style.display = 'flex';
     }
 
+    // Function to activate navigation link
     function activateNavLink(navLinkToActivate) {
         navLinks.forEach(navLink => navLink.classList.remove('nav-link_activated'));
         navLinkToActivate.classList.add('nav-link_activated');
     }
 
+    // Function to hide/show text
     function hideInfo() {
         navLinkTexts.forEach(navLinkText => {
-            if (navLinkText.style.display === 'none') {
-                navLinkText.style.display = 'block';
-            } else {
-                navLinkText.style.display = 'none';
-            }
+            navLinkText.style.display = navLinkText.style.display === 'none' ? 'flex' : 'none';
         });
     }
 
-    document.getElementById('file').addEventListener('change', async function(event) {
-        const file = event.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = async function(e) { // Define the onload event handler
-                const fileContent = e.target.result; // Get the file content
-                var file_content = fileContent; // Display the file content
-                console.log(file_content); // Log the file content to the console
+    // Function to show alert messages
+    function showAlert(message, isError = false) {
+        const alertBox = document.createElement('div');
+        alertBox.className = `custom-alert ${isError ? 'error' : ''}`;
+        alertBox.textContent = message;
+        document.body.appendChild(alertBox);
+        alertBox.classList.add('show');
+        setTimeout(() => {
+            alertBox.classList.remove('show');
+            document.body.removeChild(alertBox);
+        }, 3000);
+    }
 
-                // Use the File System Access API to save the file content
+    // Handle file upload and database fetch
+    fileInput.addEventListener('change', async function (event) {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = async function (e) {
+            file_content = e.target.result;
+            alert('File uploaded successfully!');
+
+            if (file_content) {
+                showLoading('Uploading file...');
                 try {
-                    const handle = await window.showSaveFilePicker({
-                        suggestedName: 'modified_sms_v2.xml',
-                        types: [{
-                            description: 'XML Files',
-                            accept: {'application/xml': ['.xml']}
-                        }]
+                    const response = await fetch('http://127.0.0.1:8000/file', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'text/plain' },
+                        body: file_content,
                     });
-                    const writable = await handle.createWritable();
-                    await writable.write(file_content);
-                    await writable.close();
-                    console.log('File saved successfully');
+                    alert('Uploaded');
+
+                    if (!response.ok) throw new Error('File upload failed.');
+                    
+                    const responseData = await response.json();
+                    hideLoading();
+                    showAlert('File uploaded successfully!');
+
+                    if (responseData.status === 'success') {
+                        showLoading('Fetching database results...');
+                        try {
+                            const databaseResponse = await fetch('http://127.0.0.1:8000/database_return');
+                            if (!databaseResponse.ok) throw new Error('Database fetch failed.');
+
+                            const databaseData = await databaseResponse.json();
+                            hideLoading();
+                            console.log('Database data:', databaseData);
+                        } catch (error) {
+                            hideLoading();
+                            showAlert(`Error fetching database: ${error.message}`, true);
+                        }
+                    }
                 } catch (error) {
-                    console.error('Error:', error);
+                    hideLoading();
+                    showAlert(`Error: ${error.message}`, true);
                 }
-            };
-            reader.readAsText(file); // Read the file as text
-        }
+            }
+        };
+        reader.readAsText(file);
     });
 
+    // Handle navigation clicks
     logo.addEventListener('click', hideInfo);
-
     navLinks.forEach((navLink, index) => {
         navLink.addEventListener('click', () => {
             activateNavLink(navLink);
-            switch (index) {
-                case 0: showSection(home); break;
-                case 1: showSection(addFile); break;
-                case 2: showSection(print); break;
-                case 3: showSection(budget); break;
-                case 4: showSection(bot); break;
-                case 5: showSection(settings); break;
-            }
+            const sections = [home, addFile, print, budget, bot, settings];
+            showSection(sections[index]);
         });
     });
 
+    // Set initial section
     showSection(addFile);
     activateNavLink(navLinks[1]);
 });

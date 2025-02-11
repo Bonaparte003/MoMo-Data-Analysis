@@ -1,186 +1,162 @@
-# import sqlite3
-# import json
-# import os
+import MySQLdb
+import json
+from dotenv import load_dotenv
+import os
+import datetime
+import re
 
-# def save_to_db(json_file_path, db_path):
-#     table_name = os.path.splitext(os.path.basename(json_file_path))[0]
+load_dotenv()
 
-#     conn = sqlite3.connect(db_path)
-#     cursor = conn.cursor()
-
-#     with open(json_file_path, 'r', encoding='utf-8') as f:
-#         data = json.load(f)
-
-#     if data:
-#         columns = data[0].keys()
-#         columns_with_types = ", ".join([f"{col} TEXT" for col in columns])
-#         cursor.execute(f"CREATE TABLE IF NOT EXISTS {table_name} ({columns_with_types})")
-
-#         for entry in data:
-#             placeholders = ", ".join(["?" for _ in entry])
-#             cursor.execute(f"INSERT INTO {table_name} ({', '.join(entry.keys())}) VALUES ({placeholders})", tuple(entry.values()))
-
-#     conn.commit()
-#     conn.close()
-
-# json_files = [
-#     'cleaned_incoming_money.json',
-#     'cleaned_payments.json',
-#     'cleaned_deposit.json',
-#     'cleaned_withdraw.json',
-#     'cleaned_transfer.json',
-#     'cleaned_third_party.json',
-#     'cleaned_payment_code_holders.json',
-#     'cleaned_cash_power.json',
-#     'cleaned_Airtime.json',
-#     'cleaned_Bundles.json',
-#     'cleaned_rest.json'
-# ]
-
-# db_path = 'data.db'
-
-# for json_file in json_files:
-#     json_file_path = os.path.join('Data_Categorization', 'Cleaned_Data', json_file)
-#     save_to_db(json_file_path, db_path)
-
-# print("Data has been saved to the database")
-
-import sqlite3
-
-conn = sqlite3.connect('data.db')
+conn = MySQLdb.connect(
+    host=os.getenv('MYSQL_HOST'),
+    user=os.getenv('MYSQL_USER'),
+    passwd=os.getenv('MYSQL_PASSWD'),
+    db=os.getenv('DB')
+)
 cursor = conn.cursor()
 
-sqlstatements= [
-    """CREATE TABLE IF NOT EXISTS Airtime (
-    TxId TEXT PRIMARY KEY NOT NULL,
+sqlstatements = [
+    """CREATE TABLE IF NOT EXISTS airtime (
+    TxId VARCHAR(250) PRIMARY KEY NOT NULL,
     Amount INT, 
-    CURRENCY TEXT,
+    CURRENCY VARCHAR(3),
     Date DATE,
-    TIME DATE, 
-    Type TEXT, 
+    TIME TIME, 
+    Type VARCHAR(250), 
     Balance INT, 
     Fee INT
     );""",
     
-    """CREATE TABLE IF NOT EXISTS Bundles(
-    TxId TEXT PRIMARY KEY NOT NULL,
+    """CREATE TABLE IF NOT EXISTS bundles(
+    TxId VARCHAR(250) PRIMARY KEY NOT NULL,
     Amount INT,
-    CURRENCY TEXT,
+    CURRENCY VARCHAR(3),
     Date DATE,
-    TIME DATE,
-    Type TEXT,
+    TIME TIME,
+    Type VARCHAR(250),
     Balance INT,
     Fee INT
     );
     """,
     
-    """CREATE TABLE IF NOT EXISTS Cash_Power(
-    TxId TEXT PRIMARY KEY NOT NULL,
-    TOKEN TEXT,
+    """CREATE TABLE IF NOT EXISTS cashpower(
+    TxId VARCHAR(250) PRIMARY KEY NOT NULL,
+    TOKEN VARCHAR(250),
     Amount INT,
-    CURRENCY TEXT,
+    CURRENCY VARCHAR(3),
+    Date DATE,
+    TIME TIME,
+    Type VARCHAR(250),
+    Balance INT,
+    Fee INT
+    );""",
+
+    """CREATE TABLE IF NOT EXISTS payments(
+    TxId VARCHAR(250) PRIMARY KEY NOT NULL,
+    RECEIVER VARCHAR(250),
+    AMOUNT INT,
+    CURRENCY VARCHAR(3),
+    Date DATE,
+    TIME TIME,
+    Type VARCHAR(250),
+    Balance INT,
+    Fee INT
+    );""",
+
+    """CREATE TABLE IF NOT EXISTS reversedtransactions(
+    RECEIVER VARCHAR(250),
+    AMOUNT INT,
+    CURRENCY VARCHAR(3),
+    Date DATE,
+    TIME TIME,
+    Type VARCHAR(250),
+    BALANCE INT,
+    PHONE_NUMBER VARCHAR(250),
+    FEE INT
+    );""",
+
+    """CREATE TABLE IF NOT EXISTS failedtransactions(
+    RECEIVER VARCHAR(250),
+    AMOUNT INT,
+    CURRENCY VARCHAR(3),
     Date DATE,
     TIME TIME,
     Type TEXT,
+    FEE INT
+    );""",
+
+    """CREATE TABLE IF NOT EXISTS thirdparty(
+    SENDER VARCHAR(250),
+    AMOUNT INT,
+    CURRENCY VARCHAR(3),
+    Date DATE,
+    TIME TIME,
+    Type VARCHAR(250),
+    Balance INT,
+    Fee INT
+    );""",
+
+    """CREATE TABLE IF NOT EXISTS withdraw(
+    AGENT VARCHAR(250),
+    AMOUNT INT,
+    CURRENCY VARCHAR(3),
+    Date DATE,
+    TIME TIME,
+    Type VARCHAR(250),
+    Balance INT,
+    Fee INT
+    );""",
+
+    """CREATE TABLE IF NOT EXISTS nontransaction(
+    NUMBER INT);""",
+
+    """CREATE TABLE IF NOT EXISTS incomingmoney(
+    SENDER VARCHAR(250),
+    AMOUNT INT,
+    CURRENCY VARCHAR(3),
+    Date DATE,
+    TIME TIME,
+    Type VARCHAR(250),
     Balance INT,
     Fee INT
     );""",
     
-    """CREATE TABLE IF NOT EXISTS Deposit(
+    
+    """CREATE TABLE IF NOT EXISTS transfer(
+    RECEIVER VARCHAR(250),
+    PHONE_NUMBER VARCHAR(250),
     AMOUNT INT,
-    CURRENCY TEXT,
+    CURRENCY VARCHAR(3),
     Date DATE,
     TIME TIME,
-    Type TEXT,
+    Type VARCHAR(250),
     Balance INT,
     Fee INT
     );""",
-    
-    """CREATE TABLE IF NOT EXISTS Incoming_Money(
-    SENDER TEXT,
+
+    """CREATE TABLE IF NOT EXISTS deposit(
     AMOUNT INT,
-    CURRENCY TEXT,
+    CURRENCY VARCHAR(3),
     Date DATE,
     TIME TIME,
-    Type TEXT,
+    Type VARCHAR(250),
     Balance INT,
     Fee INT
     );""",
-    
-    """CREATE TABLE IF NOT EXISTS Payments(
-    TxId TEXT PRIMARY KEY NOT NULL,
-    RECIEVER TEXT,
-    PHONE_NUMBER TEXT,
+
+    """CREATE TABLE IF NOT EXISTS codeholders(
+    RECEIVER VARCHAR(250),
+    CODE INT,
+    TxId VARCHAR(250) PRIMARY KEY NOT NULL,
     AMOUNT INT,
-    CURRENCY TEXT,
+    CURRENCY VARCHAR(3),
     Date DATE,
     TIME TIME,
-    Type TEXT,
+    Type VARCHAR(250),
     Balance INT,
     Fee INT
-    );""",
+    );"""
     
-    
-    """CREATE TABLE IF NOT EXISTS FAILED_TRANSACTIONS(
-    TxId TEXT PRIMARY KEY NOT NULL,
-    RECIEVER TEXT,
-    AMOUNT INT,
-    CURRENCY TEXT,
-    Date DATE,
-    TIME TIME,
-    Type TEXT
-    );""",
-    
-    """CREATE TABLE IF NOT EXISTS REVERSED_TRANSACTIONS(
-    RECEIVER TEXT,
-    AMOUNT INT,
-    CURRENCY TEXT,
-    Date DATE,
-    TIME TIME,
-    Type TEXT,
-    BALANCE INT
-    );""",
-    
-    
-    """CREATE TABLE IF NOT EXISTS THIRD_PARTY(
-    TxId TEXT PRIMARY KEY NOT NULL,
-    SENDER TEXT,
-    AMOUNT INT,
-    CURRENCY TEXT,
-    Date DATE,
-    TIME TIME,
-    Type TEXT,
-    Balance INT,
-    Fee INT
-    );""",
-    
-    
-    """CREATE TABLE IF NOT EXISTS Transfer(
-    RECEIVER TEXT,
-    PHONE_NUMBER TEXT,
-    AMOUNT INT,
-    CURRENCY TEXT,
-    Date DATE,
-    TIME TIME,
-    Type TEXT,
-    Balance INT,
-    Fee INT
-    );""",
-    
-    """CREATE TABLE IF NOT EXISTS WITHDRAW(
-    TxId TEXT PRIMARY KEY NOT NULL,
-    AGENT TEXT,
-    AMOUNT INT,
-    CURRENCY TEXT,
-    Date DATE,
-    TIME TIME,
-    Type TEXT,
-    Balance INT,
-    Fee INT
-    );""",
-    
-    """CREATE TABLE IF NOT EXISTS NON_TRANSACTION(
-    NUMBER INT);"""
 ]
 
 for statement in sqlstatements:
@@ -188,17 +164,219 @@ for statement in sqlstatements:
 conn.commit()
 
 json_files = [
-    'cleaned_Airtime.json',
-    'cleaned_Bundles.json',
-    'cleaned_cash_power.json',
-    'cleaned_deposit.json',
-    'cleaned_incoming_money.json',
-    'cleaned_payments.json',
-    'cleaned_failed.json',
-    'cleaned_reversed.json',
-    'cleaned_third_party.json',
-    'cleaned_transfer.json',
-    'cleaned_withdraw.json',
-    'cleaned_rest.json'
+    'Data_Categorization/Cleaned_Data/cleaned_Airtime.json',
+    'Data_Categorization/Cleaned_Data/cleaned_Bundles.json',
+    'Data_Categorization/Cleaned_Data/cleaned_cash_power.json',
+    'Data_Categorization/Cleaned_Data/cleaned_deposit.json',
+    'Data_Categorization/Cleaned_Data/cleaned_incoming_money.json',
+    'Data_Categorization/Cleaned_Data/cleaned_payments.json',
+    'Data_Categorization/Cleaned_Data/cleaned_Failed.json',
+    'Data_Categorization/Cleaned_Data/cleaned_reversed.json',
+    'Data_Categorization/Cleaned_Data/cleaned_third_party.json',
+    'Data_Categorization/Cleaned_Data/cleaned_transfer.json',
+    'Data_Categorization/Cleaned_Data/cleaned_withdraw.json',
+    'Data_Categorization/Cleaned_Data/cleaned_Non_transaction.json',
+    'Data_Categorization/Cleaned_Data/cleaned_payment_code_holders.json'
 ]
 
+column_mappings = {
+    "airtime": {
+        "TransactionId": "TxId",
+        "amount": "Amount",
+        "currency": "CURRENCY",
+        "Date": "Date",
+        "Time": "TIME",
+        "transaction_type": "Type",
+        "current_balance": "Balance",
+        "fee": "Fee"
+    },
+    "bundles": {
+        "TransactionId": "TxId",
+        "amount": "Amount",
+        "currency": "CURRENCY",
+        "Date": "Date",
+        "Time": "TIME",
+        "transaction_type": "Type",
+        "current_balance": "Balance",
+        "fee": "Fee"
+    },
+    "cashpower": {
+        "TransactionId": "TxId",
+        "token": "TOKEN",
+        "amount": "Amount",
+        "currency": "CURRENCY",
+        "Date": "Date",
+        "Time": "TIME",
+        "transaction_type": "Type",
+        "current_balance": "Balance",
+        "fee": "Fee"
+    },
+    "payments": {
+        "receiver": "RECEIVER",
+        "TransactionId": "TxId",
+        "amount": "AMOUNT",
+        "currency": "CURRENCY",
+        "Date": "Date",
+        "Time": "TIME",
+        "transaction_type": "Type",
+        "current_balance": "Balance",
+        "fee": "Fee"
+    },
+    "failedtransactions": {
+        "receiver": "RECEIVER",
+        "amount": "AMOUNT",
+        "currency": "CURRENCY",
+        "Date": "Date",
+        "Time": "TIME",
+        "transaction_type": "Type",
+        "fee": "Fee"
+    },
+    "reversedtransactions": {
+        "receiver": "RECEIVER",
+        "amount": "AMOUNT",
+        "currency": "CURRENCY",
+        "Date": "Date",
+        "Time": "TIME",
+        "transaction_type": "Type",
+        "current_balance": "BALANCE",
+        "fee": "Fee",
+        "phone_number": "PHONE_NUMBER"
+    },
+    "thirdparty": {
+        "third_party_sender": "SENDER",
+        "amount": "AMOUNT",
+        "currency": "CURRENCY",
+        "Date": "Date",
+        "Time": "TIME",
+        "transaction_type": "Type",
+        "current_balance": "Balance",
+        "fee": "Fee"
+    },
+    "withdraw": {
+        "agent": "AGENT",
+        "amount": "AMOUNT",
+        "currency": "CURRENCY",
+        "Date": "Date",
+        "Time": "TIME",
+        "transaction_type": "Type",
+        "current_balance": "Balance",
+        "fee": "Fee"
+    },
+    "nontransaction": {
+        "number": "NUMBER"
+    },
+    "incomingmoney": {
+        "sender": "SENDER",
+        "amount": "AMOUNT",
+        "currency": "CURRENCY",
+        "Date": "Date",
+        "Time": "TIME",
+        "transaction_type": "Type",
+        "current_balance": "Balance",
+        "fee": "Fee"
+    },
+    "transfer": {
+        "receiver": "RECEIVER",
+        "phone_number": "PHONE_NUMBER",
+        "amount": "AMOUNT",
+        "currency": "CURRENCY",
+        "Date": "Date",
+        "Time": "TIME",
+        "transaction_type": "Type",
+        "current_balance": "Balance",
+        "fee": "Fee"
+    },
+    "deposit": {
+        "amount": "AMOUNT",
+        "currency": "CURRENCY",
+        "Date": "Date",
+        "Time": "TIME",
+        "transaction_type": "Type",
+        "current_balance": "Balance",
+        "fee": "Fee"
+    },
+    "codeholders": {
+        "receiver": "RECEIVER",
+        "code": "CODE",
+        "TransactionId": "TxId",
+        "amount": "AMOUNT",
+        "currency": "CURRENCY",
+        "Date": "Date",
+        "Time": "TIME",
+        "transaction_type": "Type",
+        "current_balance": "Balance",
+        "fee": "Fee"
+    }
+}
+
+file_to_table_mapping = {
+    'cleaned_Airtime.json': 'airtime',
+    'cleaned_Bundles.json': 'bundles',
+    'cleaned_cash_power.json': 'cashpower',
+    'cleaned_deposit.json': 'deposit',
+    'cleaned_incoming_money.json': 'incomingmoney',
+    'cleaned_payments.json': 'payments',
+    'cleaned_Failed.json': 'failedtransactions',
+    'cleaned_reversed.json': 'reversedtransactions',
+    'cleaned_third_party.json': 'thirdparty',
+    'cleaned_transfer.json': 'transfer',
+    'cleaned_withdraw.json': 'withdraw',
+    'cleaned_Non_transaction.json': 'nontransaction',
+    'cleaned_payment_code_holders.json': 'codeholders'
+}
+
+
+
+for file in json_files:
+    try:
+        file_name = file.split('/')[-1]
+        table_name = file_to_table_mapping.get(file_name)
+
+        if not table_name:
+            print(f"Table name not found for file: {file_name}")
+            continue
+
+        if file == 'Data_Categorization/Cleaned_Data/cleaned_Non_transaction.json':
+            print("====================================" + table_name + "====================================")
+            with open(file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                number_of_objects = len(data)
+            print(number_of_objects, end="\n\n")
+            cursor.execute("INSERT INTO nontransaction (NUMBER) VALUES (%s)", (number_of_objects,))
+        else:
+            with open(file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                print("====================================" + table_name + "====================================")
+                print(data, end="\n\n")
+                if table_name in column_mappings:
+                    # Filter out entries with 'Unknown' date
+                    data = [i for i in data if i.get('Date') != 'Unknown']
+                    # Sort data by Date in descending order
+                    data.sort(key=lambda x: datetime.datetime.strptime(x['Date'], '%Y-%m-%d'), reverse=True)
+                    for i in data:
+                        if 'Unknown' in i.values():
+                            continue
+                        
+                        # Convert date and time formats if present
+                        if i.get('Date'):
+                            i['Date'] = datetime.datetime.strptime(i['Date'].replace('/', '-'), '%Y-%m-%d').date()
+                        if i.get('Time'):
+                            i['Time'] = datetime.datetime.strptime(i['Time'], '%H:%M:%S').time()
+
+                        # Map JSON keys to table column names
+                        mapped_data = {column_mappings[table_name][key]: value for key, value in i.items() if key in column_mappings[table_name]}
+
+                        # Create SQL statement dynamically
+                        columns = ', '.join(mapped_data.keys())
+                        placeholders = ', '.join(['%s'] * len(mapped_data))
+                        print("====================================" + table_name + "====================================")
+                        sql = f"INSERT INTO {table_name} ({columns}) VALUES ({placeholders})"
+
+                        cursor.execute(sql, list(mapped_data.values()))
+    except Exception as e:
+        print(f"Error occured: {e}")
+        continue
+
+conn.commit()
+cursor.close()
+conn.close()

@@ -1,7 +1,6 @@
 [
     {
         "agent": "Agent Sophia ",
-        "TransactionId": "14098463509",
         "amount": 20000,
         "currency": "RWF",
         "Date": "2024-05-26",
@@ -12,7 +11,6 @@
     },
     {
         "agent": "Agent Sophia ",
-        "TransactionId": "17006777609",
         "amount": 50000,
         "currency": "RWF",
         "Date": "2024-11-23",
@@ -23,7 +21,6 @@
     },
     {
         "agent": "Agent John ",
-        "TransactionId": "17007580507",
         "amount": 24000,
         "currency": "RWF",
         "Date": "2024-11-23",

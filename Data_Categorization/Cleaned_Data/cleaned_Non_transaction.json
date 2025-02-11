@@ -1,6 +1,5 @@
 [
     {
-        "TransactionId": "Unknown",
         "amount": 0,
         "currency": "Unknown",
         "Date": "Unknown",
@@ -10,7 +9,6 @@
         "fee": 0
     },
     {
-        "TransactionId": "Unknown",
         "amount": 0,
         "currency": "Unknown",
         "Date": "Unknown",
@@ -20,7 +18,6 @@
         "fee": 0
     },
     {
-        "TransactionId": "Unknown",
         "amount": 0,
         "currency": "Unknown",
         "Date": "Unknown",
@@ -30,7 +27,6 @@
         "fee": 0
     },
     {
-        "TransactionId": "Unknown",
         "amount": 0,
         "currency": "Unknown",
         "Date": "Unknown",
@@ -40,7 +36,6 @@
         "fee": 0
     },
     {
-        "TransactionId": "Unknown",
         "amount": 0,
         "currency": "Unknown",
         "Date": "Unknown",
@@ -50,7 +45,6 @@
         "fee": 0
     },
     {
-        "TransactionId": "Unknown",
         "amount": 0,
         "currency": "Unknown",
         "Date": "Unknown",
@@ -60,7 +54,6 @@
         "fee": 0
     },
     {
-        "TransactionId": "Unknown",
         "amount": 3000,
         "currency": "RWF",
         "Date": "Unknown",
@@ -70,7 +63,6 @@
         "fee": 0
     },
     {
-        "TransactionId": "Unknown",
         "amount": 0,
         "currency": "Unknown",
         "Date": "Unknown",
@@ -80,7 +72,6 @@
         "fee": 0
     },
     {
-        "TransactionId": "Unknown",
         "amount": 0,
         "currency": "Unknown",
         "Date": "Unknown",
@@ -90,7 +81,6 @@
         "fee": 0
     },
     {
-        "TransactionId": "Unknown",
         "amount": 0,
         "currency": "Unknown",
         "Date": "Unknown",
