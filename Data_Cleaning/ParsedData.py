@@ -46,7 +46,7 @@ def categorize_sms(body):
     else:
         return 'Other' 
 
-# Function to extract transaction details from SMS body
+
 # Function to extract transaction details from SMS body
 def extract_transaction_details(body):
     details = {}
@@ -141,4 +141,4 @@ with open(output_file, 'w', encoding='utf-8') as f:
         
         f.write("\n" + "="*50 + "\n\n")  # Separator for readability
 
-print(f" Transaction report saved to: {output_file}")
+print(f" Transaction report saved to: {output_file}") 
