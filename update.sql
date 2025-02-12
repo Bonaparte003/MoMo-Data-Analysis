@@ -1,0 +1,13 @@
+TRUNCATE TABLE airtime;
+TRUNCATE TABLE bundles;
+TRUNCATE TABLE cashpower;
+TRUNCATE TABLE codeholders;
+TRUNCATE TABLE deposit;
+TRUNCATE TABLE failedtransactions;
+TRUNCATE TABLE incomingmoney;
+TRUNCATE TABLE nontransaction;
+TRUNCATE TABLE payments;
+TRUNCATE TABLE reversedtransactions;
+TRUNCATE TABLE thirdparty;
+TRUNCATE TABLE transfer;
+TRUNCATE TABLE withdraw;

@@ -16,12 +16,31 @@ CORS(app)
 @app.route('/file', methods=['POST'])
 def file():
     try:
+        conn = MySQLdb.connect(
+            host=os.getenv('MYSQL_HOST'),
+            user=os.getenv('MYSQL_USER'),
+            passwd=os.getenv('MYSQL_PASSWD'),
+            db=os.getenv('DB')
+        )
+        cursor = conn.cursor()
+        with open('update.sql', 'r') as f:
+            sql_statements = f.read()
+        for statement in sql_statements.split(';'):
+            if statement.strip():  # Ensure the statement is not empty
+                try:
+                    cursor.execute(statement)
+                except MySQLdb.Error as e:
+                    print(f"Error executing statement: {statement}\nError: {e}")
+                    return jsonify({"error": f"Error executing statement: {statement}\nError: {e}"}), 500
+        conn.commit()
+        cursor.close()
+        conn.close()
         file = request.data.decode('utf-8')
+        print(file)
         if file:
             with open('modified_sms_v2.xml', 'w') as f:
                 f.write(file)
             list_of_subprocesses = [
-                "/usr/bin/env sh prepare_me.sh",
                 "/usr/bin/env python3 Categorizer.py",
                 "/usr/bin/env python3 Cleaner.py",
                 "/usr/bin/env python3 Db_saver.py"
@@ -45,6 +64,7 @@ def file():
 @app.route('/database_return', methods=['GET'])
 def db_return():
     try:
+        subprocess.run("/usr/bin/env sh prepare_me.sh", shell=True, capture_output=True, text=True)
         conn = MySQLdb.connect(
             host=os.getenv('MYSQL_HOST'),
             user=os.getenv('MYSQL_USER'),
@@ -82,7 +102,6 @@ def db_return():
 
         cursor.close()
         conn.close()
-
         return jsonify({"data": results}), 200
     except Exception as e:
         print(f"An error occurred: {e}")

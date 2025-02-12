@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import MySQLdb
 import json
 from dotenv import load_dotenv

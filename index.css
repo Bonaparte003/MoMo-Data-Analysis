@@ -160,9 +160,9 @@ li{
     height: calc(100% - 3%);
     width: 97%;
     gap: 20px;
+    transition: all 0.2s ease-in-out;
 }
 .home-container{
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -170,14 +170,17 @@ li{
     border-radius: 10px;
     height: 100%;
     width: 100%;
+    transition: all 0.2s ease-in-out;
 }
 
 .cash_flow{
+    flex:1;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: all 0.2s ease-in-out;
 }
 
 .cash_flow > div{
@@ -187,7 +190,7 @@ li{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 35px 25px;
+    padding: 30px 20px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
 }
 
@@ -222,7 +225,6 @@ li{
 
 
 .transactions{
-    flex: 3;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -320,55 +322,78 @@ li{
     width: 100%;
     padding: 10px 0px;
 }
+.transaction_types{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
 
-.filter .transaction_types > a{
-    padding: 10px 15px;
+.fil{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.filter .transaction_types  .fil > a{
+    padding: 5px 10px;
     border-radius: 5px;
     background-color: #ffbb00;
     color: white;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
-.filter .transaction_types > a:hover{
+.filter .transaction_types .fil > a:hover{
     background-color: #e0a800;
 }
-/*tables*/
-.table {
-    width: 100%;
-    margin: 20px 0;
-    border-collapse: collapse;
+/* Add styling for the table and container */
+#table {
+   /* Adjust the height as needed */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  border-radius: 5px;
 }
 
-.table table {
-    width: 100%;
-    border: 1px solid #ddd;
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.table th, .table td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+thead {
+  background-color: #f2f2f2;
 }
 
-.table th {
-    background-color: #000000;
-    font-weight: bold;
-    color: white;
-    border-radius: 2px;
+th, td {
+  padding: 10px;
+  text-align: right;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  font-size: 15px;
 }
 
-.table tr:hover {
-    background-color: #f1f1f1;
+th {
+  position: sticky;
+  top: 0;
+  background-color: black;
+  color: white;
+  font-size: 13px;
 }
 
-.table tr:nth-child(even) {
-    background-color: #f9f9f9;
+tbody tr:hover {
+  background-color:#d39b0378;
+  cursor: pointer;
 }
 
-.table td {
-    color: #333;
+/* Add styling for active filter buttons */
+.transaction-type a.active {
+  background-color: #007bff;
+  color: white;
 }
-
 /*Alert*/
 .custom-alert {
     position: fixed;
@@ -426,4 +451,116 @@ li{
 
 .custom-alert.error {
     background: red;
+}
+
+/*scrollbar*/
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background:#d39c03;
+}
+
+.fil > a.active{
+    background-color: black;
+}
+/*Budget*/
+.budget-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.budget-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.budget-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.budget-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#budget-form {
+  flex: 1;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#budget-form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#budget-form button:hover {
+  background-color: #0056b3;
+}
+
+#budget-table {
+  flex: 4;
+  width: 80%;
+  border-collapse: collapse;
+}
+
+#budget-table th,
+#budget-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+#budget-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+#budget-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/*chart*/
+.chart-container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+canvas {
+  width: 100% !important;
+  height: 400px !important;
 }
