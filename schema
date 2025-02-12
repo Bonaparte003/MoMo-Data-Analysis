@@ -1,0 +1,146 @@
+CREATE DATABASE IF NOT EXISTS MobileMoney;
+USE MobileMoney;
+
+-- Airtime Transactions
+CREATE TABLE IF NOT EXISTS Airtime (
+    TxId VARCHAR(255) PRIMARY KEY NOT NULL,
+    Amount INT, 
+    CURRENCY VARCHAR(10),
+    Date DATE,
+    Time TIME, 
+    Type VARCHAR(50), 
+    Balance INT, 
+    Fee INT
+);
+
+-- Bundles Transactions
+CREATE TABLE IF NOT EXISTS Bundles (
+    TxId VARCHAR(255) PRIMARY KEY NOT NULL,
+    Amount INT,
+    CURRENCY VARCHAR(10),
+    Date DATE,
+    Time TIME,
+    Type VARCHAR(50),
+    Balance INT,
+    Fee INT
+);
+
+-- Cash Power Transactions
+CREATE TABLE IF NOT EXISTS Cash_Power (
+    TxId VARCHAR(255) PRIMARY KEY NOT NULL,
+    TOKEN VARCHAR(255),
+    Amount INT,
+    CURRENCY VARCHAR(10),
+    Date DATE,
+    Time TIME,
+    Type VARCHAR(50),
+    Balance INT,
+    Fee INT
+);
+
+-- Deposits
+CREATE TABLE IF NOT EXISTS Deposit (
+    DepositId INT AUTO_INCREMENT PRIMARY KEY,
+    Amount INT,
+    CURRENCY VARCHAR(10),
+    Date DATE,
+    Time TIME,
+    Type VARCHAR(50),
+    Balance INT,
+    Fee INT
+);
+
+-- Incoming Money Transactions
+CREATE TABLE IF NOT EXISTS Incoming_Money (
+    IncomingId INT AUTO_INCREMENT PRIMARY KEY,
+    SENDER VARCHAR(255),
+    Amount INT,
+    CURRENCY VARCHAR(10),
+    Date DATE,
+    Time TIME,
+    Type VARCHAR(50),
+    Balance INT,
+    Fee INT
+);
+
+-- Payments Transactions
+CREATE TABLE IF NOT EXISTS Payments (
+    TxId VARCHAR(255) PRIMARY KEY NOT NULL,
+    RECIEVER VARCHAR(255),
+    PHONE_NUMBER VARCHAR(20),
+    Amount INT,
+    CURRENCY VARCHAR(10),
+    Date DATE,
+    Time TIME,
+    Type VARCHAR(50),
+    Balance INT,
+    Fee INT
+);
+
+-- Failed Transactions
+CREATE TABLE IF NOT EXISTS FAILED_TRANSACTIONS (
+    TxId VARCHAR(255) PRIMARY KEY NOT NULL,
+    RECIEVER VARCHAR(255),
+    Amount INT,
+    CURRENCY VARCHAR(10),
+    Date DATE,
+    Time TIME,
+    Type VARCHAR(50)
+);
+
+-- Reversed Transactions
+CREATE TABLE IF NOT EXISTS REVERSED_TRANSACTIONS (
+    TxId VARCHAR(255) PRIMARY KEY NOT NULL,
+    RECEIVER VARCHAR(255),
+    Amount INT,
+    CURRENCY VARCHAR(10),
+    Date DATE,
+    Time TIME,
+    Type VARCHAR(50),
+    Balance INT
+);
+
+-- Third-Party Transactions
+CREATE TABLE IF NOT EXISTS THIRD_PARTY (
+    TxId VARCHAR(255) PRIMARY KEY NOT NULL,
+    SENDER VARCHAR(255),
+    Amount INT,
+    CURRENCY VARCHAR(10),
+    Date DATE,
+    Time TIME,
+    Type VARCHAR(50),
+    Balance INT,
+    Fee INT
+);
+
+-- Transfer Transactions
+CREATE TABLE IF NOT EXISTS Transfer (
+    TxId VARCHAR(255) PRIMARY KEY NOT NULL,
+    RECEIVER VARCHAR(255),
+    PHONE_NUMBER VARCHAR(20),
+    Amount INT,
+    CURRENCY VARCHAR(10),
+    Date DATE,
+    Time TIME,
+    Type VARCHAR(50),
+    Balance INT,
+    Fee INT
+);
+
+-- Withdraw Transactions
+CREATE TABLE IF NOT EXISTS WITHDRAW (
+    TxId VARCHAR(255) PRIMARY KEY NOT NULL,
+    AGENT VARCHAR(255),
+    Amount INT,
+    CURRENCY VARCHAR(10),
+    Date DATE,
+    Time TIME,
+    Type VARCHAR(50),
+    Balance INT,
+    Fee INT
+);
+
+-- Non-Transaction Data
+CREATE TABLE IF NOT EXISTS NON_TRANSACTION (
+    NUMBER INT PRIMARY KEY
+);
