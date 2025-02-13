@@ -212,14 +212,20 @@ li{
     border-radius: 5px;
 }
 
-.cash_in h2{
+.cash_in h2 , .cash_in p{
     color: rgb(4, 182, 4);
+    font-weight: bold;
 }
-.cash_out{
+.cash_out, .cash_out p{
     color: red;
+    font-weight: bold;
 }
-.fees{
+.fees, .fees p{
     color: #d39c03;
+    font-weight: bold;
+}
+.balance p{
+    font-weight: bold;
 }
 
 
@@ -271,6 +277,7 @@ li{
     padding: 10px 0px;
 }
 
+
 .transactions .search{
     flex:2;
     display: flex;
@@ -291,6 +298,26 @@ li{
     width: 100%;
     padding: 10px 20px;
 }
+
+.calendar input{
+    padding: 12px 20px;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    transition: all 0.2s ease-in-out;
+}
+
+input[type="date"]{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.calendar input:focus{
+    padding: 12px 30px;
+    outline: transparent;
+}
+.calendar input:active{
+    padding: 12px 30px;
+}
+
 
 .transactions .search .placeholder{
     padding: 12px 20px;
@@ -349,6 +376,9 @@ li{
 .filter .transaction_types .fil > a:hover{
     background-color: #e0a800;
 }
+.filter .transaction_types .fil > a.active{
+    background-color: black;
+}
 /* Add styling for the table and container */
 #table {
    /* Adjust the height as needed */
@@ -385,13 +415,13 @@ th {
 }
 
 tbody tr:hover {
-  background-color:#d39b0378;
+  background-color:#fce9b678;
   cursor: pointer;
 }
 
 /* Add styling for active filter buttons */
-.transaction-type a.active {
-  background-color: #007bff;
+.transaction-type .fil a.active {
+  background-color: black;
   color: white;
 }
 /*Alert*/
@@ -528,6 +558,20 @@ tbody tr:hover {
   font-size: 16px;
 }
 
+/*bot section*/
+/* .bot-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 99%;
+  height: 99%;
+  overflow-y: scroll;
+} */
+
+/*budget section*/
+/* 
 #budget-form button:hover {
   background-color: #0056b3;
 }
@@ -552,15 +596,43 @@ tbody tr:hover {
 
 #budget-table tbody tr:nth-child(even) {
   background-color: #f9f9f9;
-}
+} */
 
 /*chart*/
-.chart-container {
-  width: 80%;
-  margin: 20px auto;
-}
-
-canvas {
-  width: 100% !important;
-  height: 400px !important;
-}
+/* .charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .chart-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .chart-card h3 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.2em;
+  }
+  
+  .line-controls {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .line-controls label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .line-controls input[type="checkbox"] {
+    cursor: pointer;
+  } */

@@ -144,8 +144,8 @@
         </div>
       </section>
       <!--Print Section -->
-      <section class="print-section">
-      </section>
+      <!-- <section class="print-section">
+      </section> -->
       <!--Budget Section-->
       <section class="budget-section">
         <div class="budget-container">
@@ -178,21 +178,36 @@
       </section>
       <!--charts-->
       <section class="bot-section">
-        <div class="chart-container">
-          <canvas id="pieChart"></canvas>
-        </div>
-        <div class="chart-container">
-          <canvas id="barChart"></canvas>
-        </div>
-        <div class="chart-container">
-          <canvas id="histogramChart"></canvas>
-        </div>
+        <!-- <div class="charts-container">
+          <div class="chart-card">
+            <canvas id="lineChart" class="lineChart"></canvas>
+            <div class="line-controls">
+              <h3>Monthly Transaction Trends</h3>
+              <label><input type="checkbox" data-line="cashIn" checked> Cash In</label>
+              <label><input type="checkbox" data-line="cashOut" checked> Cash Out</label>
+              <label><input type="checkbox" data-line="fees" checked> Fees</label>
+              <label><input type="checkbox" data-line="balance" checked> Balance</label>
+            </div>
+          </div>
+          <div class="other-charts">
+            <div class="chart-card">
+              <h3>Transaction Distribution</h3>
+              <canvas id="pieChart" class="pieChart"></canvas>
+            </div>
+            
+            <div class="chart-card">
+              <h3>Monthly Comparison</h3>
+              <canvas id="barChart" class="barChart"></canvas>
+            </div>
+          </div>
+        </div> -->
       </section>
       <!--Settings-->
       <section class="settings-section"></section>
     </section>
   </section>
   <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 
 </html>

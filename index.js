@@ -4,14 +4,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinkTexts = document.querySelectorAll(".nav-link p");
   const home = document.querySelector(".home-section");
   const addFile = document.querySelector(".Add-file-section");
-  const print = document.querySelector(".print-section");
+  // const print = document.querySelector(".print-section");
   const budget = document.querySelector(".budget-section");
   const bot = document.querySelector(".bot-section");
   const settings = document.querySelector(".settings-section");
   const fileInput = document.getElementById("file");
   let file_content = "";
   let table = document.getElementById("table");
-  const transaction_types = document.querySelectorAll(".transaction-type a");
+  let transaction_types = document.querySelectorAll(".transaction-type .fil a");
   let currentTableType = "cashpower";
   let databaseData = {};
   let totaldata;
@@ -32,27 +32,28 @@ document.addEventListener("DOMContentLoaded", function () {
   let cashOut;
   let fees;
   let balance;
+  let filteredData = {};
 
-  document.querySelector('.nav-link-print').addEventListener('click', function() {
-    window.print();
-});
+  document
+    .querySelector(".nav-link-print")
+    .addEventListener("click", function () {
+      window.print();
+    });
 
-//
+  // Handle budget form submission
+  const budgetForm = document.getElementById("budget-form");
+  const budgetTableBody = document.querySelector("#budget-table tbody");
 
-// Handle budget form submission
-const budgetForm = document.getElementById('budget-form');
-const budgetTableBody = document.querySelector('#budget-table tbody');
-
-budgetForm.addEventListener('submit', function(event) {
+  budgetForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const item = document.getElementById('item').value;
-    const amount = document.getElementById('amount').value;
+    const item = document.getElementById("item").value;
+    const amount = document.getElementById("amount").value;
 
     // Create a new row for the budget item
-    const row = document.createElement('tr');
-    const itemCell = document.createElement('td');
-    const amountCell = document.createElement('td');
+    const row = document.createElement("tr");
+    const itemCell = document.createElement("td");
+    const amountCell = document.createElement("td");
 
     itemCell.textContent = item;
     amountCell.textContent = amount;
@@ -65,7 +66,7 @@ budgetForm.addEventListener('submit', function(event) {
 
     // Clear the form
     budgetForm.reset();
-});
+  });
 
   // Function to show loading overlay
   function showLoading(message) {
@@ -86,10 +87,15 @@ budgetForm.addEventListener('submit', function(event) {
       loadingDiv.style.display = "none";
     }
   }
+  function resetFilters() {
+    document.querySelector(".search input").value = "";
+    document.querySelector(".calendar input").value = "";
+    filteredData = {}; // Reset filtered data
+  }
 
   // Function to show a section
   function showSection(sectionToShow) {
-    const sections = [home, addFile, print, budget, bot, settings];
+    const sections = [home, addFile, budget, bot, settings];
     sections.forEach((section) => (section.style.display = "none"));
     sectionToShow.style.display = "flex";
   }
@@ -196,7 +202,7 @@ budgetForm.addEventListener('submit', function(event) {
   });
 
   // Function to create and display table
-  function table_creator() {
+  function table_creator(filteredData) {
     totaldata = databaseData.data;
     airtime = totaldata.airtime || [];
     bundles = totaldata.bundles || [];
@@ -230,6 +236,9 @@ budgetForm.addEventListener('submit', function(event) {
       thead.appendChild(headerRow);
 
       // Create table rows
+      if (filteredData) {
+        console.log(filteredData);
+      }
       data.forEach((row) => {
         const tr = document.createElement("tr");
         columns.forEach((col) => {
@@ -246,18 +255,32 @@ budgetForm.addEventListener('submit', function(event) {
     };
 
     const displayTable = (data) => {
+      resetFilters();
       const table = createTable(data);
       tableContainer.appendChild(table);
     };
 
-    // Example: Display cashpower table on load
+    // Display the table and set the active button to cashpower
     displayTable(cashpower);
+    setActiveButton(".cashpower");
+    //Calculate the total money
+    updateFinancialOverview();
+
+    // Function to set active button
+    function setActiveButton(selector) {
+      let transaction_types = document.querySelectorAll(".transaction_types .fil a");
+      transaction_types.forEach((transaction_type) => {
+        transaction_type.classList.remove("active");
+      });
+      document.querySelector(selector).classList.add("active");
+    }
 
     // Add event listeners for other transaction types
     document.querySelector(".cashpower").addEventListener("click", () => {
       tableContainer.innerHTML = ""; // Clear existing table
       displayTable(cashpower);
       setActiveButton(".cashpower");
+      
     });
     document.querySelector(".codeholders").addEventListener("click", () => {
       tableContainer.innerHTML = ""; // Clear existing table
@@ -354,30 +377,30 @@ budgetForm.addEventListener('submit', function(event) {
     });
 
     for (let i = 0; i < deposit.length; i++) {
-      if (deposit[i] && deposit[i].Amount) {
-        cashIn += deposit[i].Amount;
-        console.log(deposit[i].Amount);
+      if (deposit[i] && deposit[i].AMOUNT) {
+        cashIn += deposit[i].AMOUNT;
+        console.log(deposit[i].AMOUNT);
       }
     }
     for (let i = 0; i < incoming.length; i++) {
-      if (incoming[i] && incoming[i].Amount) {
-        cashIn += incoming[i].Amount;
+      if (incoming[i] && incoming[i].AMOUNT) {
+        cashIn += incoming[i].AMOUNT;
       }
     }
     for (let i = 0; i < thirdparty.length; i++) {
-      if (thirdparty[i] && thirdparty[i].Amount) {
-        cashIn += thirdparty[i].Amount;
-        console.log(thirdparty[i].Amount);
+      if (thirdparty[i] && thirdparty[i].AMOUNT) {
+        cashIn += thirdparty[i].AMOUNT;
+        console.log(thirdparty[i].AMOUNT);
       }
     }
     for (let i = 0; i < reversedtransactions.length; i++) {
-      if (reversedtransactions[i] && reversedtransactions[i].Amount) {
-        cashIn += reversedtransactions[i].Amount;
+      if (reversedtransactions[i] && reversedtransactions[i].AMOUNT) {
+        cashIn += reversedtransactions[i].AMOUNT;
       }
     }
     for (let i = 0; i < payments.length; i++) {
-      if (payments[i] && payments[i].Amount) {
-        cashOut += payments[i].Amount;
+      if (payments[i] && payments[i].AMOUNT) {
+        cashOut += payments[i].AMOUNT;
       }
     }
     for (let i = 0; i < airtime.length; i++) {
@@ -396,18 +419,18 @@ budgetForm.addEventListener('submit', function(event) {
       }
     }
     for (let i = 0; i < codeholders.length; i++) {
-      if (codeholders[i] && codeholders[i].Amount) {
-        cashOut += codeholders[i].Amount;
+      if (codeholders[i] && codeholders[i].AMOUNT) {
+        cashOut += codeholders[i].AMOUNT;
       }
     }
     for (let i = 0; i < transfer.length; i++) {
-      if (transfer[i] && transfer[i].Amount) {
-        cashOut += transfer[i].Amount;
+      if (transfer[i] && transfer[i].AMOUNT) {
+        cashOut += transfer[i].AMOUNT;
       }
     }
     for (let i = 0; i < withdraw.length; i++) {
-      if (withdraw[i] && withdraw[i].Amount) {
-        cashOut += withdraw[i].Amount;
+      if (withdraw[i] && withdraw[i].AMOUNT) {
+        cashOut += withdraw[i].AMOUNT;
       }
     }
 
@@ -430,44 +453,47 @@ budgetForm.addEventListener('submit', function(event) {
     document.querySelector(".balance p").textContent = balance.toFixed(2);
   }
 
-  // Function to set active button
-  function setActiveButton(selector) {
-    transaction_types.forEach((transaction_type) => {
-      transaction_type.classList.remove("active");
-    });
-    document.querySelector(selector).classList.add("active");
-  }
-
-  // Function to filter table based on search and date
   function filterTable() {
-    const searchInput = document
-      .querySelector(".search input")
-      .value.toLowerCase();
+    const searchInput = document.querySelector(".search input").value.toLowerCase();
     const dateInput = document.querySelector(".calendar input").value;
-    const filteredData = databaseData.data[currentTableType].filter((item) => {
-      const matchesSearch =
-        !searchInput ||
-        (item.receiver && item.receiver.toLowerCase().includes(searchInput)) ||
-        (item.txid && item.txid.toLowerCase().includes(searchInput)) ||
-        (item.sender && item.sender.toLowerCase().includes(searchInput));
-      const matchesDate = !dateInput || item.date === dateInput;
+    filteredData = totaldata[currentTableType].filter((item) => {
+      let matchesSearch = !searchInput || Object.values(item).some(value => 
+        value && value.toString().toLowerCase().includes(searchInput)
+      );
+      let matchesDate = !dateInput || new Date(item.date) >= new Date(dateInput);
       return matchesSearch && matchesDate;
     });
-    displayTable(filteredData);
+  
+    // Hide rows that don't match the search or date filter
+    const rows = document.querySelectorAll("#table tr");
+    rows.forEach((row, index) => {
+      if (index === 0) return; // Skip header row
+      const cells = row.querySelectorAll("td");
+      const matchesSearch = Array.from(cells).some(cell => 
+        cell.textContent.toLowerCase().includes(searchInput)
+      );
+      const matchesDate = !dateInput || new Date(cells[3].textContent) >= new Date(dateInput);
+      row.style.display = matchesSearch && matchesDate ? "" : "none";
+    });
   }
-
+  
   // Add event listeners for search and date filter
-  document
-    .querySelector(".search input")
-    .addEventListener("input", filterTable);
-  document
-    .querySelector(".calendar input")
-    .addEventListener("change", filterTable);
+  document.querySelector(".search input").addEventListener("input", filterTable);
+  document.querySelector(".calendar input").addEventListener("change", filterTable);
+
+  // Event listener for transaction types
+  transaction_types.forEach((transaction_type) => {
+    transaction_type.addEventListener("click", () => {
+      currentTableType = transaction_type.dataset.type;
+      table_creator(totaldata[currentTableType]);
+    });
+  });
 
   // Handle navigation clicks
   logo.addEventListener("click", hideInfo);
   navLinks.forEach((navLink, index) => {
     navLink.addEventListener("click", () => {
+      // resetting the filters
       activateNavLink(navLink);
       const sections = [home, addFile, print, budget, bot, settings];
       showSection(sections[index]);
@@ -492,16 +518,9 @@ budgetForm.addEventListener('submit', function(event) {
       errorElement.style.display = "none";
     }
   });
-  // Add event listener for the print button
-  // document
-  //   .querySelector(".nav-link-print")
-  //   .addEventListener("click", function () {
-  //     window.print();
-  //   });
-  // Set initial section
   showSection(addFile);
   activateNavLink(navLinks[1]);
   fetchDatabaseResults();
   table_creator();
-  updateFinancialOverview();
+  
 });
