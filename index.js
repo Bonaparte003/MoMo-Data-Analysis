@@ -4,10 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinkTexts = document.querySelectorAll(".nav-link p");
   const home = document.querySelector(".home-section");
   const addFile = document.querySelector(".Add-file-section");
-  // const print = document.querySelector(".print-section");
-  const budget = document.querySelector(".budget-section");
+  const Print = document.querySelector(".Print-section");
   const bot = document.querySelector(".bot-section");
-  const settings = document.querySelector(".settings-section");
   const fileInput = document.getElementById("file");
   let file_content = "";
   let table = document.getElementById("table");
@@ -32,41 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let cashOut;
   let fees;
   let balance;
-  let filteredData = {};
-
-  document
-    .querySelector(".nav-link-print")
-    .addEventListener("click", function () {
-      window.print();
-    });
-
-  // Handle budget form submission
-  const budgetForm = document.getElementById("budget-form");
-  const budgetTableBody = document.querySelector("#budget-table tbody");
-
-  budgetForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const item = document.getElementById("item").value;
-    const amount = document.getElementById("amount").value;
-
-    // Create a new row for the budget item
-    const row = document.createElement("tr");
-    const itemCell = document.createElement("td");
-    const amountCell = document.createElement("td");
-
-    itemCell.textContent = item;
-    amountCell.textContent = amount;
-
-    row.appendChild(itemCell);
-    row.appendChild(amountCell);
-
-    // Add the new row to the table
-    budgetTableBody.appendChild(row);
-
-    // Clear the form
-    budgetForm.reset();
-  });
 
   // Function to show loading overlay
   function showLoading(message) {
@@ -95,10 +58,171 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to show a section
   function showSection(sectionToShow) {
-    const sections = [home, addFile, budget, bot, settings];
+    const sections = [home, addFile, Print, bot];
     sections.forEach((section) => (section.style.display = "none"));
     sectionToShow.style.display = "flex";
+    if (sectionToShow === bot){
+      initializeCharts();
+    }
   }
+  // Chart initializer
+  function initializeCharts() {
+      const lineCtx = document.getElementById("lineChart").getContext("2d");
+      const pieCtx = document.getElementById("pieChart").getContext("2d");
+      const barCtx = document.getElementById("barChart").getContext("2d");
+    
+      // Filter data for the line chart
+      const labels = ["January", "February", "March", "April", "May", "June", "July"];
+      const airtimeData = airtime.map(item => item.Amount);
+      const bundlesData = bundles.map(item => item.Amount);
+      const cashpowerData = cashpower.map(item => item.Amount);
+      const codeholdersData = codeholders.map(item => item.AMOUNT);
+      const depositData = deposit.map(item => item.AMOUNT);
+      const failedData = failed.map(item => item.AMOUNT);
+      const incomingData = incoming.map(item => item.AMOUNT);
+      const nontransactionData = nontransaction.map(item => item.AMOUNT);
+      const paymentsData = payments.map(item => item.AMOUNT);
+      const reversedtransactionsData = reversedtransactions.map(item => item.AMOUNT);
+      const thirdpartyData = thirdparty.map(item => item.AMOUNT);
+      const transferData = transfer.map(item => item.AMOUNT);
+      const withdrawData = withdraw.map(item => item.AMOUNT);
+    
+      const lineChart = new Chart(lineCtx, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [
+            { label: 'Airtime', data: airtimeData, borderColor: 'rgba(255, 206, 86, 1)', borderWidth: 1, fill: false },
+            { label: 'Bundles', data: bundlesData, borderColor: 'rgba(75, 192, 192, 1)', borderWidth: 1, fill: false },
+            { label: 'CashPower', data: cashpowerData, borderColor: 'rgba(153, 102, 255, 1)', borderWidth: 1, fill: false },
+            { label: 'CodeHolders', data: codeholdersData, borderColor: 'rgba(255, 159, 64, 1)', borderWidth: 1, fill: false },
+            { label: 'Deposit', data: depositData, borderColor: 'rgba(54, 162, 235, 1)', borderWidth: 1, fill: false },
+            { label: 'Failed', data: failedData, borderColor: 'rgba(255, 99, 132, 1)', borderWidth: 1, fill: false },
+            { label: 'Incoming', data: incomingData, borderColor: 'rgba(75, 192, 192, 1)', borderWidth: 1, fill: false },
+            { label: 'NonCash', data: nontransactionData, borderColor: 'rgba(153, 102, 255, 1)', borderWidth: 1, fill: false },
+            { label: 'Payments', data: paymentsData, borderColor: 'rgba(255, 159, 64, 1)', borderWidth: 1, fill: false },
+            { label: 'Reversed', data: reversedtransactionsData, borderColor: 'rgba(54, 162, 235, 1)', borderWidth: 1, fill: false },
+            { label: 'ThirdParty', data: thirdpartyData, borderColor: 'rgba(255, 99, 132, 1)', borderWidth: 1, fill: false },
+            { label: 'Transfer', data: transferData, borderColor: 'rgba(75, 192, 192, 1)', borderWidth: 1, fill: false },
+            { label: 'Withdraw', data: withdrawData, borderColor: 'rgba(153, 102, 255, 1)', borderWidth: 1, fill: false }
+          ]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            x: {
+              display: true,
+              title: {
+                display: true,
+                text: 'Month'
+              }
+            },
+            y: {
+              display: true,
+              title: {
+                display: true,
+                text: 'Value'
+              }
+            }
+          }
+        }
+      });
+    
+      // Add event listeners to checkboxes
+      document.querySelectorAll('.line-controls input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('change', function () {
+          const datasetIndex = lineChart.data.datasets.findIndex(dataset => dataset.label === this.dataset.line);
+          lineChart.data.datasets[datasetIndex].hidden = !this.checked;
+          lineChart.update();
+        });
+      });
+    
+      // Pie Chart
+      const spendingData = [
+        airtimeData.reduce((a, b) => a + b, 0),
+        bundlesData.reduce((a, b) => a + b, 0),
+        cashpowerData.reduce((a, b) => a + b, 0),
+        codeholdersData.reduce((a, b) => a + b, 0),
+        transferData.reduce((a, b) => a + b, 0),
+        withdrawData.reduce((a, b) => a + b, 0)
+      ];
+    
+      new Chart(pieCtx, {
+        type: 'pie',
+        data: {
+          labels: ['Airtime', 'Bundles', 'CashPower', 'CodeHolders', 'Transfer', 'Withdraw'],
+          datasets: [{
+            data: spendingData,
+            backgroundColor: [
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(255, 159, 64, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 99, 132, 0.2)'
+            ],
+            borderColor: [
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 99, 132, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true
+        }
+      });
+    
+      // Bar Chart
+      new Chart(barCtx, {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [
+            { label: 'Airtime', data: airtimeData, backgroundColor: 'rgba(255, 206, 86, 0.2)', borderColor: 'rgba(255, 206, 86, 1)', borderWidth: 1 },
+            { label: 'Bundles', data: bundlesData, backgroundColor: 'rgba(75, 192, 192, 0.2)', borderColor: 'rgba(75, 192, 192, 1)', borderWidth: 1 },
+            { label: 'CashPower', data: cashpowerData, backgroundColor: 'rgba(153, 102, 255, 0.2)', borderColor: 'rgba(153, 102, 255, 1)', borderWidth: 1 },
+            { label: 'CodeHolders', data: codeholdersData, backgroundColor: 'rgba(255, 159, 64, 0.2)', borderColor: 'rgba(255, 159, 64, 1)', borderWidth: 1 },
+            { label: 'Transfer', data: transferData, backgroundColor: 'rgba(54, 162, 235, 0.2)', borderColor: 'rgba(54, 162, 235, 1)', borderWidth: 1 },
+            { label: 'Withdraw', data: withdrawData, backgroundColor: 'rgba(255, 99, 132, 0.2)', borderColor: 'rgba(255, 99, 132, 1)', borderWidth: 1 }
+          ]
+        },
+        options: {
+          responsive: true,
+          indexAxis: 'y', // This option makes the bar chart horizontal
+          scales: {
+            x: {
+              display: true,
+              title: {
+                display: true,
+                text: 'Value'
+              },
+              // Set the maximum value dynamically based on the largest value in the dataset
+              max: Math.max(
+                ...airtimeData,
+                ...bundlesData,
+                ...cashpowerData,
+                ...codeholdersData,
+                ...transferData,
+                ...withdrawData
+              )
+            },
+            y: {
+              display: true,
+              title: {
+                display: true,
+                text: 'Month'
+              }
+            }
+          }
+        }
+      });
+    }
+  
 
   // Function to activate navigation link
   function activateNavLink(navLinkToActivate) {
@@ -243,7 +367,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const tr = document.createElement("tr");
         columns.forEach((col) => {
           const td = document.createElement("td");
-          td.textContent = row[col] || "";
+          td.textContent = row[col] || 0;
           tr.appendChild(td);
         });
         tbody.appendChild(tr);
@@ -346,6 +470,88 @@ document.addEventListener("DOMContentLoaded", function () {
       displayTable(withdraw);
       setActiveButton(".withdraw");
     });
+    
+    //printer
+    document.getElementById("download-pdf-btn").addEventListener("click", function () {
+      downloadTablesAsPDF();
+    });
+    
+    function generatePrintTables() {
+      const transactionTypes = [
+        { name: "Airtime", data: airtime },
+        { name: "Bundles", data: bundles },
+        { name: "CashPower", data: cashpower },
+        { name: "CodeHolders", data: codeholders },
+        { name: "Deposit", data: deposit },
+        { name: "Failed", data: failed },
+        { name: "Incoming", data: incoming },
+        { name: "NonCash", data: nontransaction },
+        { name: "Payments", data: payments },
+        { name: "Reversed", data: reversedtransactions },
+        { name: "ThirdParty", data: thirdparty },
+        { name: "Transfer", data: transfer },
+        { name: "Withdraw", data: withdraw }
+      ];
+    
+      const printTablesContainer = document.getElementById("print-tables");
+      printTablesContainer.innerHTML = ""; // Clear existing content
+    
+      transactionTypes.forEach(type => {
+        const table = createTable(type.data);
+        const title = document.createElement("h3");
+        title.textContent = type.name;
+        printTablesContainer.appendChild(title);
+        printTablesContainer.appendChild(table);
+      });
+    }
+    
+    function downloadTablesAsPDF() {
+      const { jsPDF } = window.jspdf;
+      const pdf = new jsPDF('p', 'mm', 'a4');
+      pdf.setFontSize(18);
+      pdf.text("Momo Analyst Report", 14, 22);
+    
+      const transactionTypes = [
+        { name: "Airtime", data: airtime },
+        { name: "Bundles", data: bundles },
+        { name: "CashPower", data: cashpower },
+        { name: "CodeHolders", data: codeholders },
+        { name: "Deposit", data: deposit },
+        { name: "Failed", data: failed },
+        { name: "Incoming", data: incoming },
+        { name: "NonCash", data: nontransaction },
+        { name: "Payments", data: payments },
+        { name: "Reversed", data: reversedtransactions },
+        { name: "ThirdParty", data: thirdparty },
+        { name: "Transfer", data: transfer },
+        { name: "Withdraw", data: withdraw }
+      ];
+    
+      let yOffset = 30; // Initial offset for the first table
+    
+      transactionTypes.forEach(type => {
+        pdf.setFontSize(14);
+        pdf.text(type.name, 14, yOffset);
+        yOffset += 6;
+    
+        const tableData = type.data.map(row => Object.values(row));
+        const columns = Object.keys(type.data[0] || {});
+    
+        pdf.autoTable({
+          startY: yOffset,
+          head: [columns],
+          body: tableData,
+          theme: 'grid',
+          styles: { fontSize: 10 },
+          headStyles: { fillColor: [255, 255, 255], textColor: [0, 0, 0] },
+          margin: { top: 10 }
+        });
+    
+        yOffset = pdf.autoTable.previous.finalY + 10; // Update yOffset for the next table
+      });
+    
+      pdf.save('Momo_Analyst_Report.pdf');
+    }
   }
 
   // Function to update financial overview
@@ -477,6 +683,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   
+
+
   // Add event listeners for search and date filter
   document.querySelector(".search input").addEventListener("input", filterTable);
   document.querySelector(".calendar input").addEventListener("change", filterTable);
@@ -495,7 +703,7 @@ document.addEventListener("DOMContentLoaded", function () {
     navLink.addEventListener("click", () => {
       // resetting the filters
       activateNavLink(navLink);
-      const sections = [home, addFile, print, budget, bot, settings];
+      const sections = [home, addFile, Print, bot];
       showSection(sections[index]);
     });
   });
@@ -507,6 +715,7 @@ document.addEventListener("DOMContentLoaded", function () {
       table_creator(databaseData, currentTableType);
     });
   });
+
 
   document.getElementById("file").addEventListener("change", function (event) {
     const file = event.target.files[0];
